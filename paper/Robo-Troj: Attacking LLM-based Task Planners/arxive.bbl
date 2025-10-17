@@ -1,0 +1,408 @@
+\begin{thebibliography}{79}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Nilsson et~al.(1984)]{nilsson1984shakey}
+N.~J. Nilsson et~al.
+\newblock \emph{\href{https://www.sri.com/wp-content/uploads/2021/12/629.pdf}{Shakey the robot}}, volume 323.
+\newblock Sri International Menlo Park, California, 1984.
+
+\bibitem[Fikes and Nilsson(1971)]{fikes1971strips}
+R.~E. Fikes and N.~J. Nilsson.
+\newblock Strips: A new approach to the application of theorem proving to problem solving.
+\newblock \emph{Artificial intelligence}, 2\penalty0 (3-4):\penalty0 189--208, 1971.
+
+\bibitem[Hoffmann(2001)]{hoffmann2001ff}
+J.~Hoffmann.
+\newblock \href{Ff: The fast-forward planning system.}{FF: The fast-forward planning system}.
+\newblock \emph{AI magazine}, 22\penalty0 (3):\penalty0 57--57, 2001.
+
+\bibitem[Baier et~al.(2009)Baier, Bacchus, and McIlraith]{baier2009heuristic}
+J.~A. Baier, F.~Bacchus, and S.~A. McIlraith.
+\newblock \href{https://www.ijcai.org/Proceedings/07/Papers/292.pdf}{A heuristic search approach to planning with temporally extended preferences}.
+\newblock \emph{Artificial Intelligence}, 173\penalty0 (5-6):\penalty0 593--618, 2009.
+
+\bibitem[Helmert(2006)]{helmert2006fast}
+M.~Helmert.
+\newblock \href{https://arxiv.org/pdf/1109.6051}{The fast downward planning system}.
+\newblock \emph{Journal of Artificial Intelligence Research}, 26:\penalty0 191--246, 2006.
+
+\bibitem[Hopcroft et~al.(2001)Hopcroft, Motwani, and Ullman]{hopcroft2001introduction}
+J.~E. Hopcroft, R.~Motwani, and J.~D. Ullman.
+\newblock Introduction to automata theory, languages, and computation.
+\newblock \emph{Acm Sigact News}, 32\penalty0 (1):\penalty0 60--65, 2001.
+
+\bibitem[Pnueli and Rosner(1989)]{pnueli1989synthesis}
+A.~Pnueli and R.~Rosner.
+\newblock \href{https://dl.acm.org/doi/pdf/10.1145/75277.75293}{On the synthesis of a reactive module}.
+\newblock In \emph{Proceedings of the 16th ACM SIGPLAN-SIGACT symposium on Principles of programming languages}, pages 179--190, 1989.
+
+\bibitem[Ahn et~al.(2022)Ahn, Brohan, Brown, Chebotar, Cortes, David, Finn, Fu, Gopalakrishnan, Hausman, et~al.]{ahn2022can}
+M.~Ahn, A.~Brohan, N.~Brown, Y.~Chebotar, O.~Cortes, B.~David, C.~Finn, C.~Fu, K.~Gopalakrishnan, K.~Hausman, et~al.
+\newblock \href{https://arxiv.org/pdf/2204.01691}{Do as i can, not as i say: Grounding language in robotic affordances}.
+\newblock \emph{arXiv preprint arXiv:2204.01691}, 2022.
+
+\bibitem[Singh et~al.(2023)Singh, Blukis, Mousavian, Goyal, Xu, Tremblay, Fox, Thomason, and Garg]{singh2023progprompt}
+I.~Singh, V.~Blukis, A.~Mousavian, A.~Goyal, D.~Xu, J.~Tremblay, D.~Fox, J.~Thomason, and A.~Garg.
+\newblock \href{https://arxiv.org/pdf/2209.11302}{Progprompt: Generating situated robot task plans using large language models}.
+\newblock In \emph{2023 IEEE International Conference on Robotics and Automation (ICRA)}, pages 11523--11530. IEEE, 2023.
+
+\bibitem[Huang et~al.(2022)Huang, Abbeel, Pathak, and Mordatch]{huang2022language}
+W.~Huang, P.~Abbeel, D.~Pathak, and I.~Mordatch.
+\newblock \href{https://arxiv.org/pdf/2201.07207}{Language models as zero-shot planners: Extracting actionable knowledge for embodied agents}.
+\newblock In \emph{International Conference on Machine Learning}, pages 9118--9147. PMLR, 2022.
+
+\bibitem[Rana et~al.(2023)Rana, Haviland, Garg, Abou-Chakra, Reid, and Suenderhauf]{rana2023sayplan}
+K.~Rana, J.~Haviland, S.~Garg, J.~Abou-Chakra, I.~Reid, and N.~Suenderhauf.
+\newblock \href{https://arxiv.org/pdf/2307.06135}{Sayplan: Grounding large language models using 3d scene graphs for scalable task planning}.
+\newblock \emph{arXiv preprint arXiv:2307.06135}, 2023.
+
+\bibitem[Liu et~al.(2023)Liu, Jiang, Zhang, Liu, Zhang, Biswas, and Stone]{liu2023llm+}
+B.~Liu, Y.~Jiang, X.~Zhang, Q.~Liu, S.~Zhang, J.~Biswas, and P.~Stone.
+\newblock \href{https://arxiv.org/pdf/2304.11477}{Llm+ p: Empowering large language models with optimal planning proficiency}.
+\newblock \emph{arXiv preprint arXiv:2304.11477}, 2023.
+
+\bibitem[Ding et~al.(2023)Ding, Zhang, Amiri, Cao, Yang, Kaminski, Esselink, and Zhang]{ding2023integrating}
+Y.~Ding, X.~Zhang, S.~Amiri, N.~Cao, H.~Yang, A.~Kaminski, C.~Esselink, and S.~Zhang.
+\newblock \href{https://arxiv.org/pdf/2305.17590}{Integrating action knowledge and LLMs for task planning and situation handling in open worlds}.
+\newblock \emph{Autonomous Robots}, 47\penalty0 (8):\penalty0 981--997, 2023.
+
+\bibitem[Kawaharazuka et~al.(2024)Kawaharazuka, Matsushima, Gambardella, Guo, Paxton, and Zeng]{kawaharazuka2024real}
+K.~Kawaharazuka, T.~Matsushima, A.~Gambardella, J.~Guo, C.~Paxton, and A.~Zeng.
+\newblock \href{https://arxiv.org/pdf/2402.05741}{Real-world robot applications of foundation models: A review}.
+\newblock \emph{Advanced Robotics}, pages 1--23, 2024.
+
+\bibitem[Pallagani et~al.(2024)Pallagani, Roy, Muppasani, Fabiano, Loreggia, Murugesan, Srivastava, Rossi, Horesh, and Sheth]{pallagani2024prospects}
+V.~Pallagani, K.~Roy, B.~Muppasani, F.~Fabiano, A.~Loreggia, K.~Murugesan, B.~Srivastava, F.~Rossi, L.~Horesh, and A.~Sheth.
+\newblock \href{https://arxiv.org/pdf/2401.02500}{On the prospects of incorporating large language models (llms) in automated planning and scheduling (aps)}.
+\newblock In \emph{34th International Conference on Automated Planning and Scheduling}, 2024.
+
+\bibitem[Nguyen and Tran(2021)]{nguyen2021wanet}
+A.~Nguyen and A.~Tran.
+\newblock \href{https://arxiv.org/pdf/2102.10369}{Wanet--imperceptible warping-based backdoor attack}.
+\newblock \emph{arXiv preprint arXiv:2102.10369}, 2021.
+
+\bibitem[Zheng et~al.(2023)Zheng, Lou, and Jiang]{zheng2023trojvit}
+M.~Zheng, Q.~Lou, and L.~Jiang.
+\newblock \href{https://arxiv.org/pdf/2208.13049}{Trojvit: Trojan insertion in vision transformers}.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 4025--4034, 2023.
+
+\bibitem[Li et~al.(2024)Li, Jiang, Li, and Xia]{backdoor-survey}
+Y.~Li, Y.~Jiang, Z.~Li, and S.-T. Xia.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9802938}{Backdoor Learning: A Survey}.
+\newblock \emph{IEEE Transactions on Neural Networks and Learning Systems}, 35\penalty0 (1):\penalty0 5--22, 2024.
+\newblock \doi{10.1109/TNNLS.2022.3182979}.
+
+\bibitem[Gu et~al.(2019)Gu, Liu, Dolan-Gavitt, and Garg]{gu2019badnets}
+T.~Gu, K.~Liu, B.~Dolan-Gavitt, and S.~Garg.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8685687}{Badnets: Evaluating backdooring attacks on deep neural networks}.
+\newblock \emph{IEEE Access}, 7:\penalty0 47230--47244, 2019.
+
+\bibitem[Zhang et~al.(2021)Zhang, Zhang, Ji, and Wang]{zhang2021trojaning}
+X.~Zhang, Z.~Zhang, S.~Ji, and T.~Wang.
+\newblock \href{https://arxiv.org/pdf/2008.00312}{Trojaning language models for fun and profit}.
+\newblock In \emph{2021 IEEE European Symposium on Security and Privacy (EuroS\&P)}, pages 179--197. IEEE, 2021.
+
+\bibitem[Rakin et~al.(2020)Rakin, He, and Fan]{rakin2020tbt}
+A.~S. Rakin, Z.~He, and D.~Fan.
+\newblock \href{https://openaccess.thecvf.com/content_CVPR_2020/papers/Rakin_TBT_Targeted_Neural_Network_Attack_With_Bit_Trojan_CVPR_2020_paper.pdf}{TBT: Targeted Neural Network Attack with Bit Trojan}.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 13198--13207, 2020.
+
+\bibitem[Jiao et~al.(2025)Jiao, Xie, Yue, SATO, Wang, Wang, Chen, and Zhu]{jiao2025can}
+R.~Jiao, S.~Xie, J.~Yue, T.~SATO, L.~Wang, Y.~Wang, Q.~A. Chen, and Q.~Zhu.
+\newblock Can we trust embodied agents? exploring backdoor attacks against embodied {LLM}-based decision-making systems.
+\newblock In \emph{The Thirteenth International Conference on Learning Representations}, 2025.
+\newblock URL \url{https://openreview.net/forum?id=S1Bv3068Xt}.
+
+\bibitem[Li et~al.(2024)Li, Li, Chen, Zhang, Liu, Wang, Zhang, and Liu]{li2024badedit}
+Y.~Li, T.~Li, K.~Chen, J.~Zhang, S.~Liu, W.~Wang, T.~Zhang, and Y.~Liu.
+\newblock \href{https://arxiv.org/pdf/2403.13355}{BadEdit: Backdooring large language models by model editing}, 2024.
+
+\bibitem[Bagdasaryan and Shmatikov(2022)]{9833572}
+E.~Bagdasaryan and V.~Shmatikov.
+\newblock \href{https://arxiv.org/pdf/2112.05224}{Spinning Language Models: Risks of Propaganda-As-A-Service and Countermeasures}.
+\newblock In \emph{2022 IEEE Symposium on Security and Privacy (SP)}, pages 769--786, 2022.
+\newblock \doi{10.1109/SP46214.2022.9833572}.
+
+\bibitem[Lester et~al.(2021)Lester, Al-Rfou, and Constant]{lester2021power}
+B.~Lester, R.~Al-Rfou, and N.~Constant.
+\newblock \href{https://arxiv.org/pdf/2104.08691}{The power of scale for parameter-efficient prompt tuning}.
+\newblock \emph{arXiv preprint arXiv:2104.08691}, 2021.
+
+\bibitem[Liu et~al.(2024)Liu, Zheng, Du, Ding, Qian, Yang, and Tang]{liu2024gpt}
+X.~Liu, Y.~Zheng, Z.~Du, M.~Ding, Y.~Qian, Z.~Yang, and J.~Tang.
+\newblock
+  \href{https://pdf.sciencedirectassets.com/777606/1-s2.0-S2666651023X00023/1-s2.0-S2666651023000141/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBMaCXVzLWVhc3QtMSJGMEQCIGINoA5ppArgYWRJEIg8wsfv56xQn9XmCX0BNPiSZ1bdAiAw1h0Pz%2F5B3wYtmn2PH8Ws8oJlKfBQLCDplNPvycN5aiqzBQgcEAUaDDA1OTAwMzU0Njg2NSIMCM2%2Bl41zjOe9YPDIKpAFjoUGEAWmHE6AMccxBo01H2O4RL%2BGrQ5zJi292ugFXMPmr0GjLKhnNzlztXx6FxCU47ImvODNvUglJO%2FCCTLyMet1tQnzpBF%2BxtmcPcdvZl1%2BeizYcrfmGCDBtvTNHb%2BDktj3ZVBA%2FnLEcZ9%2FGIZHQtoOYw8fp81hlmoFHLHW%2FveZKUZ8z29ZEIp%2BbfIDmyEZ4J9LC5asxd%2BMdB3SqpEtsWjATbSpShkb0DVW%2FsXYZ2zwZK6SNcAITgR5K3iz6zFS9h4gSiTKyvb1rZGCJrHpzWcz1dxOA1TU2MIXih8ykLOItp7l0SpS3MJ7SVzLTiTUzUrtUKjtdzcKgKQtiXi7unvCCVXC46hnz3x3tfAf7OLbwIzp7XqvFSC%2BWXyqAvLsVdK8dJChsrCChny3qR%2BvnfBXFKscJ1STgJuSctlGTo8N6Vqt8qbYoXICXyLtwbLe1lwm95krHyJzn%2F2wJiUHYsSqS6SebyDygUr2iP6i6ml9acftJg0M2SVWsycwKTY6mBWYIFmzolJKZpcGoSkNK2OKik89FVu2fomQh8KP9pkSc9k4ItXfl0X9%2FSB3cAtkx5hjMY67WJs%2BC7cqjUcUiHMhYpjIRkBKIvkP0tLyDnRBlSZ1iVlU7NRm8TKjn9hbxYsSXhFzraojp49U0YjE5B9QfM7tDXGn23y6GJkmoUQarX0ZKteHMp3DNJb8AtFsFpx0coWxQUVz1Sf%2Bl%2BYABE57ZZ1m7Le7GbJ%2FTq6CSWOQ35YS3c%2Fgk8g0yT1ZCnI3boCVjQ0DkqN%2FUG2r2gOUpo3X%2FxVk24IYHieI0TjL341QgD3%2FM5ei7E%2FGJXLjBi38HNBAQBtzdwA4YSrXKYa2zYdtUOQLU3UFOiBryjlYdM8wjL3PvAY6sgF9gmu1yAFKnX02O3laobqbR40HfzYKkY%2FC7BAgVaKqSb5S2l5Z%2FOu%2BbJcDGNxtnmI7hmYMnEu3Z3ze3WqameduS9WQL7h4NLynztchPFXZ4vEHK%2BplZ6%2B7yB%2BwABSBb1huprjkNI1IKUWeYmIPpbC8Q2E3ifpVkfS0St8CcqFHX3foABiTEUZwC%2BYxqqoBJPdJbttmzgPRVF3utrte%2BXT3sfpzkbWxhPHVPycI7pNZq4Tl&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250124T200842Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY2H4OOC4F%2F20250124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=4c0fc374eba34068a530a2c47f80794b0a66a5731e8afe68a66bfe7519dd545f&hash=6f8a629c974f066f0e18c45602e919034d70455f8d31bd9ecd8e1afb3c1cbf0a&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S2666651023000141&tid=spdf-33ce5932-456e-427d-b6d9-ee1a4b6af1e1&sid=212028d1622d554b217af3e84de8fb2a6902gxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=131d5c5355550f5e5005&rr=9072a82edd0943dd&cc=us}{GPT
+  understands, too}.
+\newblock \emph{AI Open}, 5:\penalty0 208--215, 2024.
+
+\bibitem[Du et~al.(2022)Du, Zhao, Li, Liu, and Wang]{du2022ppt}
+W.~Du, Y.~Zhao, B.~Li, G.~Liu, and S.~Wang.
+\newblock \href{https://www.ijcai.org/proceedings/2022/0096.pdf}{PPT: Backdoor Attacks on Pre-trained Models via Poisoned Prompt Tuning.}
+\newblock In \emph{IJCAI}, pages 680--686, 2022.
+
+\bibitem[Zheng et~al.(2023)Zheng, Xue, Chen, Wang, Lou, and Jiang]{zheng2023trojfsp}
+M.~Zheng, J.~Xue, X.~Chen, Y.~Wang, Q.~Lou, and L.~Jiang.
+\newblock \href{https://arxiv.org/pdf/2312.10467}{TrojFSP: Trojan Insertion in Few-shot Prompt Tuning}.
+\newblock \emph{arXiv preprint arXiv:2312.10467}, 2023.
+
+\bibitem[Zhao et~al.(2024)Zhao, Chen, Ding, Zhou, Zhang, Xu, and Zhao]{zhao2024survey}
+Z.~Zhao, S.~Chen, Y.~Ding, Z.~Zhou, S.~Zhang, D.~Xu, and Y.~Zhao.
+\newblock \href{https://arxiv.org/pdf/2404.02817}{A Survey of Optimization-based Task and Motion Planning: From Classical To Learning Approaches}.
+\newblock \emph{arXiv preprint arXiv:2404.02817}, 2024.
+
+\bibitem[Huang et~al.(2022)Huang, Xia, Xiao, Chan, Liang, Florence, Zeng, Tompson, Mordatch, Chebotar, et~al.]{huang2022inner}
+W.~Huang, F.~Xia, T.~Xiao, H.~Chan, J.~Liang, P.~Florence, A.~Zeng, J.~Tompson, I.~Mordatch, Y.~Chebotar, et~al.
+\newblock \href{https://arxiv.org/pdf/2207.05608}{Inner monologue: Embodied reasoning through planning with language models}.
+\newblock \emph{arXiv preprint arXiv:2207.05608}, 2022.
+
+\bibitem[Xie et~al.(2023)Xie, Yu, Zhu, Bai, Gong, and Soh]{xie2023translating}
+Y.~Xie, C.~Yu, T.~Zhu, J.~Bai, Z.~Gong, and H.~Soh.
+\newblock \href{https://arxiv.org/pdf/2302.05128}{Translating natural language to planning goals with large-language models}.
+\newblock \emph{arXiv preprint arXiv:2302.05128}, 2023.
+
+\bibitem[Ding et~al.(2023)Ding, Zhang, Paxton, and Zhang]{ding2023task}
+Y.~Ding, X.~Zhang, C.~Paxton, and S.~Zhang.
+\newblock \href{https://arxiv.org/pdf/2303.06247}{Task and motion planning with large language models for object rearrangement}.
+\newblock In \emph{2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, pages 2086--2092. IEEE, 2023.
+
+\bibitem[Jansen(2020)]{jansen2020visually}
+P.~A. Jansen.
+\newblock \href{https://arxiv.org/pdf/2009.14259}{Visually-grounded planning without vision: Language models infer detailed plans from high-level instructions}.
+\newblock \emph{arXiv preprint arXiv:2009.14259}, 2020.
+
+\bibitem[Logeswaran et~al.(2022)Logeswaran, Fu, Lee, and Lee]{logeswaran2022few}
+L.~Logeswaran, Y.~Fu, M.~Lee, and H.~Lee.
+\newblock \href{https://arxiv.org/pdf/2205.14288}{Few-shot subgoal planning with language models}.
+\newblock \emph{arXiv preprint arXiv:2205.14288}, 2022.
+
+\bibitem[Zhao et~al.(2023)Zhao, Yuan, Jiang, Cai, Yu, Wang, and Chen]{zhao2023erra}
+C.~Zhao, S.~Yuan, C.~Jiang, J.~Cai, H.~Yu, M.~Y. Wang, and Q.~Chen.
+\newblock \href{https://arxiv.org/pdf/2304.02251}{Erra: An embodied representation and reasoning architecture for long-horizon language-conditioned manipulation tasks}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 2023.
+
+\bibitem[Ghallab et~al.(2016)Ghallab, Nau, and Traverso]{ghallab2016automated}
+M.~Ghallab, D.~Nau, and P.~Traverso.
+\newblock \emph{Automated planning and acting}.
+\newblock Cambridge University Press, 2016.
+
+\bibitem[Jiang et~al.(2019)Jiang, Zhang, Khandelwal, and Stone]{jiang2019task}
+Y.-q. Jiang, S.-q. Zhang, P.~Khandelwal, and P.~Stone.
+\newblock \href{https://arxiv.org/pdf/1804.08229}{Task planning in robotics: an empirical comparison of pddl-and asp-based systems}.
+\newblock \emph{Frontiers of Information Technology \& Electronic Engineering}, 20:\penalty0 363--373, 2019.
+
+\bibitem[Wang et~al.(2024)Wang, Chen, Li, Tang, Guo, Wang, Wang, Zhou, and Chu]{llm_on_server1}
+Y.~Wang, Y.~Chen, Z.~Li, Z.~Tang, R.~Guo, X.~Wang, Q.~Wang, A.~C. Zhou, and X.~Chu.
+\newblock \href{https://arxiv.org/pdf/2401.17644v2}{Towards Efficient and Reliable LLM Serving: A Real-World Workload Study}.
+\newblock \emph{arXiv preprint arXiv:2401.17644}, 2024.
+
+\bibitem[Stojkovic et~al.(2024)Stojkovic, Choukse, Zhang, Goiri, and Torrellas]{llm_on_server2}
+J.~Stojkovic, E.~Choukse, C.~Zhang, I.~Goiri, and J.~Torrellas.
+\newblock \href{https://arxiv.org/pdf/2403.20306}{Towards Greener LLMs: Bringing Energy-Efficiency to the Forefront of LLM Inference}.
+\newblock \emph{arXiv preprint arXiv:2403.20306}, 2024.
+
+\bibitem[Yuan et~al.(2024)Yuan, Chen, Cui, Gao, Zou, Cheng, Ji, Liu, and Sun]{llm_domain_adaptation1}
+L.~Yuan, Y.~Chen, G.~Cui, H.~Gao, F.~Zou, X.~Cheng, H.~Ji, Z.~Liu, and M.~Sun.
+\newblock \href{https://arxiv.org/pdf/2306.04618}{Revisiting Out-of-distribution Robustness in NLP: Benchmarks, Analysis, and LLMs Evaluations}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Jiang et~al.(2024)Jiang, Huang, Luo, Zhang, Huang, Wei, Deng, Sun, Zhang, Wang, et~al.]{llm_domain_adaptation2}
+T.~Jiang, S.~Huang, S.~Luo, Z.~Zhang, H.~Huang, F.~Wei, W.~Deng, F.~Sun, Q.~Zhang, D.~Wang, et~al.
+\newblock \href{https://arxiv.org/pdf/2401.07284}{Improving Domain Adaptation through Extended-Text Reading Comprehension}.
+\newblock \emph{arXiv preprint arXiv:2401.07284}, 2024.
+
+\bibitem[Zhang et~al.(2024)Zhang, Patil, Jain, Shen, Zaharia, Stoica, and Gonzalez]{llm_domain_adaptation3}
+T.~Zhang, S.~G. Patil, N.~Jain, S.~Shen, M.~Zaharia, I.~Stoica, and J.~E. Gonzalez.
+\newblock \href{https://arxiv.org/pdf/2403.10131}{Raft: Adapting language model to domain specific rag}.
+\newblock \emph{arXiv preprint arXiv:2403.10131}, 2024.
+
+\bibitem[Liu et~al.(2024)Liu, He, Tian, and Chawla]{llm_spt1}
+Z.~Liu, X.~He, Y.~Tian, and N.~V. Chawla.
+\newblock \href{https://arxiv.org/pdf/2402.10359}{Can we soft prompt LLMs for graph learning tasks?}
+\newblock In \emph{Companion Proceedings of the ACM on Web Conference 2024}, pages 481--484, 2024.
+
+\bibitem[Peng et~al.(2024)Peng, Yang, Smith, Yu, Chen, Bian, and Wu]{llm_spt2}
+C.~Peng, X.~Yang, K.~E. Smith, Z.~Yu, A.~Chen, J.~Bian, and Y.~Wu.
+\newblock \href{https://arxiv.org/pdf/2310.06239}{Model tuning or prompt tuning? A study of large language models for clinical concept and relation extraction}.
+\newblock \emph{Journal of biomedical informatics}, 153:\penalty0 104630, 2024.
+
+\bibitem[Wu et~al.(2024)Wu, Yu, Wang, Song, Zhang, Zhao, Lu, Li, and Henao]{llm_spt3}
+J.~Wu, T.~Yu, R.~Wang, Z.~Song, R.~Zhang, H.~Zhao, C.~Lu, S.~Li, and R.~Henao.
+\newblock \href{https://arxiv.org/pdf/2306.04933}{Infoprompt: Information-theoretic soft prompt tuning for natural language understanding}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Chen et~al.(2017)Chen, Liu, Li, Lu, and Song]{blend}
+X.~Chen, C.~Liu, B.~Li, K.~Lu, and D.~Song.
+\newblock \href{https://arxiv.org/pdf/1712.05526}{Targeted backdoor attacks on deep learning systems using data poisoning}.
+\newblock \emph{arXiv preprint arXiv:1712.05526}, 2017.
+
+\bibitem[Li et~al.(2021)Li, Li, Wu, Li, He, and Lyu]{issba}
+Y.~Li, Y.~Li, B.~Wu, L.~Li, R.~He, and S.~Lyu.
+\newblock \href{https://arxiv.org/pdf/2012.03816}{Invisible backdoor attack with sample-specific triggers}.
+\newblock In \emph{Proceedings of the IEEE/CVF international conference on computer vision}, pages 16463--16472, 2021.
+
+\bibitem[Dai et~al.(2019)Dai, Chen, and Li]{dai2019backdoor}
+J.~Dai, C.~Chen, and Y.~Li.
+\newblock \href{https://arxiv.org/pdf/1905.12457}{A backdoor attack against lstm-based text classification systems}.
+\newblock \emph{IEEE Access}, 7:\penalty0 138872--138878, 2019.
+
+\bibitem[Wang et~al.(2022)Wang, Zhai, and Ma]{bppattack}
+Z.~Wang, J.~Zhai, and S.~Ma.
+\newblock \href{https://arxiv.org/abs/2205.13383}{Bppattack: Stealthy and efficient trojan attacks against deep neural networks via image quantization and contrastive adversarial learning}.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 15074--15084, 2022.
+
+\bibitem[Yao et~al.(2024)Yao, Lou, and Qin]{backdoor_attack_llm1}
+H.~Yao, J.~Lou, and Z.~Qin.
+\newblock \href{https://arxiv.org/pdf/2310.12439}{Poisonprompt: Backdoor attack on prompt-based large language models}.
+\newblock In \emph{ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, pages 7745--7749. IEEE, 2024.
+
+\bibitem[Kurita et~al.(2020)Kurita, Michel, and Neubig]{kurita2020weight}
+K.~Kurita, P.~Michel, and G.~Neubig.
+\newblock \href{https://arxiv.org/pdf/2004.06660}{Weight poisoning attacks on pre-trained models}.
+\newblock \emph{arXiv preprint arXiv:2004.06660}, 2020.
+
+\bibitem[Yang et~al.(2021{\natexlab{a}})Yang, Li, Zhang, Ren, Sun, and He]{yang2021careful}
+W.~Yang, L.~Li, Z.~Zhang, X.~Ren, X.~Sun, and B.~He.
+\newblock \href{https://arxiv.org/pdf/2103.15543}{Be careful about poisoned word embeddings: Exploring the vulnerability of the embedding layers in nlp models}.
+\newblock \emph{arXiv preprint arXiv:2103.15543}, 2021{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2021{\natexlab{b}})Yang, Lin, Li, Zhou, and Sun]{yang2021rethinking}
+W.~Yang, Y.~Lin, P.~Li, J.~Zhou, and X.~Sun.
+\newblock \href{https://aclanthology.org/2021.acl-long.431.pdf}{Rethinking stealthiness of backdoor attack against nlp models}.
+\newblock In \emph{Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)}, pages 5543--5557, 2021{\natexlab{b}}.
+
+\bibitem[Pan et~al.(2022)Pan, Zhang, Sheng, Zhu, and Yang]{pan2022hidden}
+X.~Pan, M.~Zhang, B.~Sheng, J.~Zhu, and M.~Yang.
+\newblock \href{https://www.usenix.org/system/files/sec22-pan-hidden.pdf}{Hidden trigger backdoor attack on $\{$NLP$\}$ models via linguistic style manipulation}.
+\newblock In \emph{31st USENIX Security Symposium (USENIX Security 22)}, pages 3611--3628, 2022.
+
+\bibitem[Kumar et~al.(2024)Kumar, Silver, McClinton, Zhao, Proulx, Lozano-P{\'e}rez, Kaelbling, and Barry]{kumar2024practice}
+N.~Kumar, T.~Silver, W.~McClinton, L.~Zhao, S.~Proulx, T.~Lozano-P{\'e}rez, L.~P. Kaelbling, and J.~Barry.
+\newblock \href{https://arxiv.org/pdf/2402.15025}{Practice Makes Perfect: Planning to Learn Skill Parameter Policies}.
+\newblock \emph{arXiv preprint arXiv:2402.15025}, 2024.
+
+\bibitem[Ying et~al.(2024)Ying, Liu, Aarya, Fang, Tellex, Tenenbaum, and Shu]{ying2024siftom}
+L.~Ying, J.~X. Liu, S.~Aarya, Y.~Fang, S.~Tellex, J.~B. Tenenbaum, and T.~Shu.
+\newblock \href{https://arxiv.org/pdf/2409.10849}{SIFToM: Robust Spoken Instruction Following through Theory of Mind}.
+\newblock \emph{arXiv preprint arXiv:2409.10849}, 2024.
+
+\bibitem[cho(2022)]{chonkar2022look}
+\href{https://par.nsf.gov/servlets/purl/10463884}{Look to my Lead: How Does a Leash Affect Perceptions of a Quadruped Robot?}
+\newblock In \emph{The 2022 IEEE International Conference on Robotics and Automation (ICRA).}, 2022.
+
+\bibitem[Hauser et~al.(2023)Hauser, Chan, Chonkar, Hemkumar, Wang, Dua, Gupta, Enriquez, Kao, Hart, et~al.]{hauser2023s}
+E.~Hauser, Y.-C. Chan, P.~Chonkar, G.~Hemkumar, H.~Wang, D.~Dua, S.~Gupta, E.~M. Enriquez, T.~Kao, J.~Hart, et~al.
+\newblock \href{https://dl.acm.org/doi/pdf/10.1145/3597512.3599707}{" What’s That Robot Doing Here?": Perceptions Of Incidental Encounters With Autonomous Quadruped Robots}.
+\newblock In \emph{Proceedings of the First International Symposium on Trustworthy Autonomous Systems}, pages 1--15, 2023.
+
+\bibitem[spo(2024)]{spot2024}
+\href{https://bostondynamics.com/blog/spot-to-the-rescue/}{"Spot to the Rescue"}, 2024.
+\newblock https://bostondynamics.com/blog/spot-to-the-rescue/.
+
+\bibitem[Jang et~al.(2016)Jang, Gu, and Poole]{jang2016categorical}
+E.~Jang, S.~Gu, and B.~Poole.
+\newblock \href{https://arxiv.org/pdf/1611.01144}{Categorical reparameterization with gumbel-softmax}.
+\newblock \emph{arXiv preprint arXiv:1611.01144}, 2016.
+
+\bibitem[Guo et~al.(2021)Guo, Sablayrolles, J{\'e}gou, and Kiela]{guo2021gradient}
+C.~Guo, A.~Sablayrolles, H.~J{\'e}gou, and D.~Kiela.
+\newblock \href{https://arxiv.org/pdf/2104.13733}{Gradient-based adversarial attacks against text transformers}.
+\newblock \emph{arXiv preprint arXiv:2104.13733}, 2021.
+
+\bibitem[Valmeekam et~al.(2024)Valmeekam, Marquez, Olmo, Sreedharan, and Kambhampati]{valmeekam2024planbench}
+K.~Valmeekam, M.~Marquez, A.~Olmo, S.~Sreedharan, and S.~Kambhampati.
+\newblock \href{https://arxiv.org/pdf/2206.10498}{Planbench: An extensible benchmark for evaluating large language models on planning and reasoning about change}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Papineni et~al.(2002)Papineni, Roukos, Ward, and Zhu]{papineni2002bleu}
+K.~Papineni, S.~Roukos, T.~Ward, and W.-J. Zhu.
+\newblock \href{https://aclanthology.org/P02-1040.pdf}{Bleu: a method for automatic evaluation of machine translation}.
+\newblock In \emph{Proceedings of the 40th annual meeting of the Association for Computational Linguistics}, pages 311--318, 2002.
+
+\bibitem[Shao et~al.(2019)Shao, Huang, Wen, Xu, and Zhu]{shao2019long}
+Z.~Shao, M.~Huang, J.~Wen, W.~Xu, and X.~Zhu.
+\newblock \href{https://aclanthology.org/D19-1321.pdf}{Long and diverse text generation with planning-based hierarchical variational model}.
+\newblock \emph{arXiv preprint arXiv:1908.06605}, 2019.
+
+\bibitem[Li et~al.(2015)Li, Galley, Brockett, Gao, and Dolan]{li2015diversity}
+J.~Li, M.~Galley, C.~Brockett, J.~Gao, and B.~Dolan.
+\newblock \href{https://arxiv.org/pdf/1510.03055}{A diversity-promoting objective function for neural conversation models}.
+\newblock \emph{arXiv preprint arXiv:1510.03055}, 2015.
+
+\bibitem[Puig et~al.(2018)Puig, Ra, Boben, Li, Wang, Fidler, and Torralba]{puig2018virtualhome}
+X.~Puig, K.~Ra, M.~Boben, J.~Li, T.~Wang, S.~Fidler, and A.~Torralba.
+\newblock \href{https://arxiv.org/pdf/1806.07011}{Virtualhome: Simulating household activities via programs}.
+\newblock In \emph{Proceedings of the IEEE conference on computer vision and pattern recognition}, pages 8494--8502, 2018.
+
+\bibitem[Liao et~al.(2019)Liao, Puig, Boben, Torralba, and Fidler]{8953243}
+Y.-H. Liao, X.~Puig, M.~Boben, A.~Torralba, and S.~Fidler.
+\newblock \href{https://openaccess.thecvf.com/content_CVPR_2019/papers/Liao_Synthesizing_Environment-Aware_Activities_via_Activity_Sketches_CVPR_2019_paper.pdf}{Synthesizing Environment-Aware Activities via Activity Sketches}.
+\newblock In \emph{2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 6284--6292, 2019.
+\newblock \doi{10.1109/CVPR.2019.00645}.
+
+\bibitem[Radford et~al.(2019)Radford, Wu, Child, Luan, Amodei, Sutskever, et~al.]{radford2019language}
+A.~Radford, J.~Wu, R.~Child, D.~Luan, D.~Amodei, I.~Sutskever, et~al.
+\newblock \href{https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf}{Language models are unsupervised multitask learners}.
+\newblock \emph{OpenAI blog}, 1\penalty0 (8):\penalty0 9, 2019.
+
+\bibitem[Touvron et~al.(2023)Touvron, Martin, Stone, Albert, Almahairi, Babaei, Bashlykov, Batra, Bhargava, Bhosale, et~al.]{touvron2023llama2}
+H.~Touvron, L.~Martin, K.~Stone, P.~Albert, A.~Almahairi, Y.~Babaei, N.~Bashlykov, S.~Batra, P.~Bhargava, S.~Bhosale, et~al.
+\newblock \href{https://arxiv.org/pdf/2307.09288}{Llama 2: Open foundation and fine-tuned chat models}.
+\newblock \emph{arXiv preprint arXiv:2307.09288}, 2023.
+
+\bibitem[Wang and Komatsuzaki(2021)]{gpt-j}
+B.~Wang and A.~Komatsuzaki.
+\newblock {GPT-J-6B: A 6 Billion Parameter Autoregressive Language Model}.
+\newblock \url{https://github.com/kingoflolz/mesh-transformer-jax}, May 2021.
+
+\bibitem[Liu et~al.(2023)Liu, Zheng, Du, Ding, Qian, Yang, and Tang]{liu2023gpt}
+X.~Liu, Y.~Zheng, Z.~Du, M.~Ding, Y.~Qian, Z.~Yang, and J.~Tang.
+\newblock \href{https://arxiv.org/pdf/2103.10385}{GPT understands, too}.
+\newblock \emph{AI Open}, 2023.
+
+\bibitem[Gao et~al.(2021)Gao, Kim, Doan, Zhang, Zhang, Nepal, Ranasinghe, and Kim]{gao2021design}
+Y.~Gao, Y.~Kim, B.~G. Doan, Z.~Zhang, G.~Zhang, S.~Nepal, D.~C. Ranasinghe, and H.~Kim.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9343758}{Design and evaluation of a multi-domain trojan detection method on deep neural networks}.
+\newblock \emph{IEEE Transactions on Dependable and Secure Computing}, 19\penalty0 (4):\penalty0 2349--2364, 2021.
+
+\bibitem[Xi et~al.(2024)Xi, Du, Li, Pang, Ji, Chen, Ma, and Wang]{xi2024defending}
+Z.~Xi, T.~Du, C.~Li, R.~Pang, S.~Ji, J.~Chen, F.~Ma, and T.~Wang.
+\newblock \href{https://arxiv.org/pdf/2309.13256}{Defending pre-trained language models as few-shot learners against backdoor attacks}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Zheng et~al.(2022)Zheng, Tang, Li, and Liu]{zheng2022data}
+R.~Zheng, R.~Tang, J.~Li, and L.~Liu.
+\newblock \href{https://arxiv.org/pdf/2208.03111}{Data-free backdoor removal based on channel lipschitzness}.
+\newblock In \emph{European Conference on Computer Vision}, pages 175--191. Springer, 2022.
+
+\bibitem[Ahmed et~al.(2023)Ahmed, Al~Arafat, Rizve, Hossain, Guo, and Rakin]{ahmed2023ssda}
+S.~Ahmed, A.~Al~Arafat, M.~N. Rizve, R.~Hossain, Z.~Guo, and A.~S. Rakin.
+\newblock \href{https://openaccess.thecvf.com/content/ICCV2023/papers/Ahmed_SSDA_Secure_Source-Free_Domain_Adaptation_ICCV_2023_paper.pdf}{SSDA: Secure Source-Free Domain Adaptation}.
+\newblock In \emph{Proceedings of the IEEE/CVF International Conference on Computer Vision}, pages 19180--19190, 2023.
+
+\bibitem[Guan et~al.(2024)Guan, Zhou, Liu, Zha, Amor, and Kambhampati]{guan2024task}
+L.~Guan, Y.~Zhou, D.~Liu, Y.~Zha, H.~B. Amor, and S.~Kambhampati.
+\newblock \href{https://arxiv.org/pdf/2402.04210}{" Task Success" is not Enough: Investigating the Use of Video-Language Models as Behavior Critics for Catching Undesirable Agent Behaviors}.
+\newblock \emph{arXiv preprint arXiv:2402.04210}, 2024.
+
+\bibitem[Taori et~al.(2023)Taori, Gulrajani, Zhang, Dubois, Li, Guestrin, Liang, and Hashimoto]{alpaca}
+R.~Taori, I.~Gulrajani, T.~Zhang, Y.~Dubois, X.~Li, C.~Guestrin, P.~Liang, and T.~B. Hashimoto.
+\newblock Stanford alpaca: An instruction-following llama model.
+\newblock \url{https://github.com/tatsu-lab/stanford_alpaca}, 2023.
+
+\bibitem[Conover et~al.(2023)Conover, Hayes, Mathur, Xie, Wan, Shah, Ghodsi, Wendell, Zaharia, and Xin]{DatabricksBlog2023DollyV2}
+M.~Conover, M.~Hayes, A.~Mathur, J.~Xie, J.~Wan, S.~Shah, A.~Ghodsi, P.~Wendell, M.~Zaharia, and R.~Xin.
+\newblock Free dolly: Introducing the world's first truly open instruction-tuned llm, 2023.
+\newblock URL \url{https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm}.
+
+\bibitem[Yang et~al.(2015)Yang, Yih, and Meek]{yang-etal-2015-wikiqa}
+Y.~Yang, W.-t. Yih, and C.~Meek.
+\newblock \href{https://aclanthology.org/D15-1237.pdf}{"{W}iki{QA}: A Challenge Dataset for Open-Domain Question Answering"}.
+\newblock In \emph{Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing}, pages 2013--2018, Lisbon, Portugal, Sept. 2015. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/D15-1237}.
+\newblock URL \url{https://aclanthology.org/D15-1237}.
+
+\end{thebibliography}
