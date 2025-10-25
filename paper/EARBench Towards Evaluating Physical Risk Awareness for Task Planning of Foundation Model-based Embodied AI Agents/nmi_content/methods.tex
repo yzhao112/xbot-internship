@@ -1,0 +1,91 @@
+\section{Methods}
+
+
+\subsection{Safety Guidelines Generation}
+The safety guidelines generation module plays a pivotal role in the \benchname framework, aims at creating EAI-centric safety guidelines that serve multiple purposes within the framework.
+In the real-world scenarios, we find that adherence to safety guidelines is crucial to prevent potential risks across various domains.
+These human-centric safety guidelines, crafted by experts based on common sense and specialized knowledge, provide critical instructions for safe operation. For instance, microwave oven manuals explicitly warn against heating metal objects to prevent fire hazards. 
+Similarly, the concept of ``Constitutional AI''~\cite{bai2022constitutional},  a design philosophy for artificial intelligence, have been proposed to ensure AI systems adhere to a set of explicit ethical principles and values in their decision-making and actions. 
+Drawing inspiration from real-world safety practices and ``Constitutional AI'', we design this module to generate EAI-centric safety guidelines. 
+These guidelines serve multiple crucial functions within the \benchname framework: 
+
+\begin{itemize}
+    \item \textbf{Guiding test case generation:} The safety guidelines help guide the LLMs in generating corresponding test cases, reducing the likelihood of hallucinations that may occur when LLMs directly generate test cases without constraints.
+    \item \textbf{Serving as constitutional principles:} During robot execution, these guidelines act as constitutional principles, preventing robots from performing unsafe actions that could lead to hazardous consequences.
+    \item \textbf{Providing evaluation criteria:} The safety guidelines serve as evaluation criteria during assessments, enhancing the accuracy of safety assessment.
+\end{itemize}
+
+To generate these EAI-centric safety guidelines, we utilize the extensive knowledge that LLMs have acquired from being trained on massive corpora that might contain real-world safety rules. Here, we prompt GPT-4o with carefully crafted queries to generate safety guidelines that are specifically tailored to the diverse scenarios and environments where EAI agents may operate.
+By generating these EAI-centric safety guidelines, we establish a foundation for risk assessment and mitigation throughout the \benchname framework. 
+
+\subsection{Risky Scene Generation}
+Risky scene generation module aims to generate test cases based on safety tips to simulate risky scenes where physical risks may occur. To ensure the realistic and precision of generated scenes, we first design a scene information format tailored for embodied intelligence applications, which compromises three fundamental elements, including the necessary objects, the positions of the objects, and the attributes of the objects.  The description and composition of each element are as follows:
+
+\begin{itemize}
+    \item \textbf{Objects:} At the core of scene are objects, which refers to any tangible entities that have a presence and can interact with the environment or with other objects, such as furniture (\eg \textit{tables, chairs, sofas}), appliances (\eg \textit{refrigerators, ovens, TVs}), tools (\eg \textit{hammers, screwdrivers, wrenches}) and \etc. Each object is uniquely identified with a \textit{name\_id} format (\eg \textit{spoon\_1}), allowing for distinction between identical objects within the scene.
+
+    \item \textbf{Object positions:} The object positions determine spatial arrangement of objects in the scene. We use a triple \textit{$<$object\_1, relation, object\_2$>$} to represent relative positions, where relation is spatial descriptor such as \textit{above}, \textit{below}, \textit{behind}. These relational positions help simulate realistic scenes by considering how objects are typically organized and interact with each other in an environment, allowing the constructed scenes to more accurately reflect possible real-world configurations.
+
+    \item \textbf{Object attributes:} Each object in the scene is characterized by specific attributes that reflect their physical properties and states. Attributes include properties such as color (\eg \textit{the color of refrigerator is white}), material (\eg \textit{the chair is made of wooden}), state (\eg \textit{the door of the microwave is opened}), and \etc. These attributes are crucial for enriching the scene’s description.
+\end{itemize}
+
+Apart from above necessary scene information, this module is also responsible for generating task instructions for EAI agents to follow. The instructions should be described in natural language, explicit and challenging, inducing agents to take unsafe actions denoted in the safety tips, thereby evaluating their risk awareness capabilities. Here we utilize GPT-4o to generate scene information and task instructions. The scene information is then transformed into scene observations, which serve as perceptual input for the EAI agents. We introduce two distinct observation modalities: textual observation and visual observation.
+\begin{itemize}
+    \item \textbf{Textual observation:} The textual observation synthesizes the scene information into a coherent natural language description, which is particularly suitable for agents whose decision-maker is text-only LLMs. This detailed scene description enables LLMs to comprehend the scene’s complexity and make effective high-level plans.
+
+    \item \textbf{Visual observation:} We further transform the scene information into visual observation based on text-to-image diffusion models, to simulate the perspective a robot’s camera might capture. Here we adopt Midjounery-V6~\cite{midjounery} to generate realistic scene images. These visual data encapsulate multiple dimensions of scene information, including spatial layout and object attributes, providing a rich visual context for agents that process image input.
+\end{itemize}
+
+
+
+\subsection{Embodied Task Planning}
+Following the creation of risky scenes,  we design an embodied planning generation module. In this module, we create a foundation model-powered EAI agent to complete task instructions in the risky scenes by generating high-level plans. Here, the foundation model can be any LLM or VLM. To ensure that the generated plans are executable for downstream low-level control system of the robots, we additionally provide the foundation model with a robot configuration including skill set. The skill set delineates the repertoire of actions available to the robot, from basic locomotion to complex manipulative tasks such as \textit{move}, \textit{place}, \textit{clean}, and \etc. To improve the applicability of \benchnameend, we provide various planning paradigms.
+
+\subsubsection{Planning with Textual Observation} 
+Under this paradigm, we leverage the natural language processing capabilities of foundation models (including both LLMs and VLMs) to take the textual observation of the scene as input. The foundation models parses this textual information to generate a series of high-level plans that align with the robot's skill set. This approach takes full advantage of foundation models in understanding complex context and reasoning, enabling EAI agents to formulate appropriate action plans based on detailed scene descriptions.
+
+\subsubsection{Planning with Visual Observation}
+To better simulate real-world scenarios, we also design a planning paradigm based on visual observation. In this mode, we utilize the multimodal processing capabilities of VLMs, taking images of the scene as input. VLMs can analyze spatial relationships, object characteristics, and potential risks within the images, thereby generating contextually relevant plans. This visually-driven approach allows EAI agents to directly perceive environment from visual information and make corresponding planning decisions, more closely aligning with practical application scenarios. 
+
+\subsubsection{Planning with Risk Mitigation Strategies}
+Drawing inspiration from Constitutional AI~\cite{bai2022constitutional}, we propose two fundamental prompt-based risk mitigation strategies that act as different granularities of constitutions: the implicit risk mitigation strategy (RM-Implicit) and the explicit risk mitigation strategy (RM-Explicit). These strategies aim to instill safety constraints into the agent's decision-making process in the same way that constitutional principles guide human behavior and governance.
+
+\begin{itemize}
+\item \textbf{Implicit risk mitigation strategy (RM-Implicit):}
+In this strategy, we incorporate general safety rules into the prompt, serving as coarse-grained constitution that implicitly reminds the model to consider potential risks when generating plans. This strategy is designed to test whether foundation models can mitigate risks through their understanding of universal safety principles. By embedding these general safety guidelines within the prompt, we aim to influence the model's decision-making process, encouraging it to generate plans that consider safety without explicit instructions.
+
+\item \textbf{Explicit risk mitigation strategy (RM-Explicit):} 
+This strategy involves incorporating more detailed safety rules that act as fine-grained constitution. We directly insert the safety tips specific to the current scene that generated by the first module into the prompt, explicitly asking the model to avoid violating these safety prompts when making decisions. By providing clear, scene-specific safety guidelines, this strategy aims to maximize the model's risk awareness capabilities to generate safe and appropriate plans.
+\end{itemize}
+
+\subsection{Plan Assessment}
+
+The Plan assessment module serves as the final component of the \benchname framework, designed to evaluate the high-level plans generated by EAI agents, offering valuable insights into the reliability of EAI systems in various scenarios. The assessment is conducted from two critical perspectives: safety and effectiveness.
+
+\begin{itemize}
+    \item \textbf{Safety evaluation:} 
+    The safety evaluation aims to assess whether the plans generated by EAI agents are safe, specifically focusing on identifying potential risks that could lead to physical hazards. We leverage GPT-4o as the evaluator, enabling automated and scalable assessment process. To enhance the reliability of the safety evaluation, we incorporate the safety tips generated in the first module into the evaluator. Since the scenes and task instructions are constructed based on the safety tips, the incorporation of pre-generated safety tips
+    allows the evaluator to judge whether the plans violate specific safety tips, rather than directly conducting a general safety assessment without concrete criteria. Based on this methodology, we propose the Task Risk Rate metric, which is defined as the proportion of tasks where the generated plans are deemed to contain potential risks, providing  a quantitative measure of the EAI agent's risk awareness across various scenarios.
+
+    \item \textbf{Effectiveness evaluation:}
+    The effectiveness evaluation is designed to assess the quality of the generated plans in terms of executability. 
+    The plans are considered effective if all actions fall within the robot's skill set and can be executed. Conversely, if any action in the plans exceeds the robot's capabilities, the plans are deemed ineffective.
+    To quantify this aspect of plan quality, we introduce the Task Effectiveness Rate metric, which is defined as the proportion of tasks for which the generated plans are determined to be fully executable.
+\end{itemize}
+
+By combining these two evaluation criteria, the plan assessment module provides a comprehensive analysis of the plans generated by EAI agents. It not only ensures that the plans adhere to critical safety guidelines but also verifies their practical feasibility within the constraints of the robot's capabilities. 
+
+
+
+
+\subsection{Evaluated Foundation Models}
+To comprehensively assess the risk awareness capabilities of foundation models as task planners for EAI agents, we conduct evaluations using \benchname across a diverse range of foundation models. These include both unimodal text-only large language models and multimodal vision-language models, encompassing open-source and proprietary models of various scales.
+For unimodal text-only LLMs, our evaluation encompasses GPT-3.5 Turbo~\cite{openai2023gpt35}, Llama-3.1 (8B and 70B variants)~\cite{touvron2023llama}, Qwen2 (7B and 72B variants) \cite{yang2024qwen2}, DeepSeek-V2~\cite{deepseekai2024deepseekv2strongeconomicalefficient}, and Mixtral of Experts (8×7B and 8×22B variants) \cite{jiang2024mixtral}. These models represents a wide spectrum of model sizes and architectures within the text-only domain.
+In the realm of multimodal VLMs, we assess GPT-4o~\citep{openai2024gpt4o}, GPT-4o mini~\cite{openai2024gpt4omini}, Claude 3 Haiku~\citep{Claude}, and Gemini 1.5 Flash~\citep{reid2024gemini}. These models are chosen for their ability to process both textual and visual inputs, allowing for a more comprehensive evaluation of risk awareness in multimodal contexts.
+We assess all models (both LLMs and VLMs) on the textual scenarios of the \datasetnameend. Additionally, we evaluate the multimodal VLMs on the visual scenarios.
+
+\section{Data availability}
+The \datasetname used in this study is publicly available at \url{https://github.com/zihao-ai/\benchname}. This repository contains the complete dataset used for evaluating the risk awareness capabilities of EAI agents, including both textual and visual scenarios. All datasets are provided under the MIT license.
+
+\section{Code availability}
+The complete codebase for \benchname is open-source and can be accessed at \url{https://github.com/zihao-ai/\benchname}. This repository provides all necessary code to reproduce our results and extend our work for future research in embodied artificial intelligence. All source code is provided under the MIT license.

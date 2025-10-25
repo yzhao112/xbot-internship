@@ -1,0 +1,136 @@
+\section{Results}\label{sec:results}
+
+
+
+
+
+\subsection{\benchname}
+To comprehensively assess the risk identification and avoidance capabilities of foundation models serving as task planning of EAI agents, in this study, we propose \benchnameend, which is the first automated physical risk assessment framework specifically designed for EAI scenarios. At its core is leveraging various foundational models to create a multi-agent cooperative system, which can autonomously handle test case generation and assess the models' capabilities. 
+The overall workflow of \benchname is shown in Fig. \ref{fig:main}b. It comprises four key components, including safety guidelines generation module, risky scene generation module, embodied task planning module, and plan assessment module. Given a specific scene as input, the safety guidelines generation module first produces relevant safety tips using a pre-trained Large Language Model (LLM). These safety guidelines serve as a foundation for creating risk-aware scenarios.
+Next, the risky scene generation module utilizes an LLM to generate detailed scene information and task instructions that may potentially induce risks, based on the safety guidelines. This module also produces both textual and visual observations of the scene, with the latter created using advanced text-to-image models.
+The embodied task planning module then simulates an EAI agent by employing various foundation models (LLMs or VLMs) to generate high-level plans based on the task instructions and scene observations. These plans represent the actions an EAI agent might take in the given scenario.
+Finally, the plan assessment module evaluates the safety and effectiveness of the generated plans. An LLM-based evaluator analyzes the plans against the original safety guidelines and scene context to determine if they contain any potential risks or unsafe actions. This evaluation process yields quantitative metrics such as Task Risk Rate (TRR) and Task Effectiveness Rate (TER), providing a comprehensive assessment of the EAI agent's performance in terms of both safety awareness and task completion capability.
+This automated, end-to-end framework enables systematic evaluation of various foundation models in EAI contexts, offering valuable insights into their risk awareness and decision-making processes across diverse scenarios.
+
+\subsection{\datasetname Construction}
+Utilizing our proposed \benchname framework, we constructed the \datasetnameend, the first comprehensive dataset of physical risks within the domain of embodied artificial intelligence. This dataset encompasses 28 distinct scenes across seven domains where EAI agents may be deployed, such as kitchens, hotels, and factories. The dataset construction process began with using GPT-4o to generate an initial set of safety tips for each scene, which were then filtered by an LLM-based judger to ensure their relevance and applicability to EAI agents. For each validated safety tip, GPT-4o was employed to construct detailed scene descriptions and generate task instructions that could potentially induce risks related to the safety tip. The scene information was then transformed into two types of observations: textual observations generated using GPT-4o to provide detailed textual descriptions of the scene, and visual observations created using Midjourney-V6, a state-of-the-art text-to-image model, to produce visual representations of the scenes. The final \datasetname consists of 2,636 samples, evenly split between 1,318 textual scenarios with textual observations as perceptual input and 1,318 visual scenarios with corresponding visual observations. As shown in Fig. \ref{fig:main}c, the dataset covers various domains to ensure comprehensive evaluation, with home scenarios comprising the largest portion at 38.3\%, followed by commercial (23.0\%), medical (10.8\%), science (10.4\%), industrial (7.8\%), education (6.8\%), and entertainment (2.9\%). This diverse composition facilitates a thorough evaluation of the risk awareness capabilities of EAI agents across a wide range of environmental contexts and potential applications.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{nmi_content/figs/res_overall.pdf}
+    \caption{\textbf{Comparison of Task Risk Rate (TRR) and Task Effectiveness Rate (TER) across various foundation models.} The dotted line separates open-source (left) from closed-source (right) models. Results show consistently high TRR (average 95.75\%) across all models, indicating pervasive potential risks in AI-generated plans for EAI tasks. Notably, even GPT-4o, widely recognized as one of the most advanced language models, exhibits a high TRR of 94.03\%. Simultaneously, TER remain relatively high (typically 80-95\%), suggesting models are adept at generating executable plans but struggle with incorporating safety considerations. This stark contrast between high task effectiveness and poor risk awareness highlights a critical gap in the current capabilities of foundation models for safe EAI applications.}
+    \label{fig:res_overall}
+\end{figure}
+
+
+
+
+
+
+\subsection{Evaluation of Foundation Models as ``Brain'' of EAI Agents}
+
+Based on the proposed \benchname and \datasetnameend, we conduct extensive evaluation encompassing a diverse range of models. Our study included both unimodal text-only large language models (LLMs) and multimodal vision-language models (VLMs), covering open-source and closed-source variants across various scales.
+Both unimodal text-only LLMs and multimodal VLMs are evaluated on the textual scenarios of the \datasetnameend, while the multimodal VLMs are further assessed on the visual scenarios. 
+
+To quantify the performance of EAI agents in terms of safety and effectiveness, we introduce two key metrics: Task Risk Rate (TRR) and Task Effectiveness Rate (TER). 
+Let $\mathcal{T} = \{t_1, ..., t_N\}$ denote a set of $N$ safety tips, each $t_i$ associated with corresponding observation, and task instruction. For each case, an EAI agent generates a high-level plan $\bm{p}_i = [s_1, ..., s_{k_i}]$ consisting of $k_i$ steps.
+We define two binary indicator functions: safety indicator $\mathbb{I}_s(\bm{p}_i, s_i)=1$ when $\bm{p}_i$ contains potential risk denoted in $s_i$; effectiveness indicator $\mathbb{I}_e(p_i)=1$ for any step $s_i\in \bm{p}_i $ is executable. 
+TRR, representing the percentage of plans containing potential risks, is defined as:
+\begin{equation}
+    \text{TRR} = \frac{\sum_{i=1}^N \mathbb{I}_s(\bm{p}_i, s_i)}{N}.
+\end{equation}
+TER, measuring the percentage of executable plans, is defined as:
+\begin{equation}
+    \text{TER} = \frac{\sum_{i=1}^N \mathbb{I}_e(\bm{p}_i)}{N}.
+\end{equation}
+Higher TRR indicates poorer risk identification and avoidance capabilities, while higher TER suggests better task completion capability.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{nmi_content/figs/domain.pdf}
+    \caption{\textbf{Domain-specific analysis of Task Risk Rate (TRR) across various foundation models.} We evaluate TRR across seven different domains (Home, Commercial, Medical, Science, Industrial, Education, and Entertainment) for all evaluated models. Results demonstrate persistently high TRR (>90\%) across all domains, emphasizing the universal challenge of physical risk for diverse EAI tasks. For each domain, a representative visual observation is provided, along with a corresponding safety tip and an example of a risky plan that contain the potential risk.}
+    \label{fig:res_domain}
+\end{figure}
+
+\begin{figure}[!tbp]
+    \centering
+    \includegraphics[width=\linewidth]{nmi_content/figs/res_analysis.pdf}
+    \caption{\textbf{Analysis of Task Risk Rate (TRR) across different model types, scenarios, and sizes, and the impact of safety tips on evaluation consistency.} \textbf{a,} Comparison of TRR between open-source and closed-source models: open-source models show higher average TRR of 96.38\% with consistent performance, while closed-source models have slightly lower average TRR of 94.86\% but greater variability.  \textbf{b,} Comparison between textual and visual scenarios for multimodal VLMs: visual inputs show marginally lower TRR, indicating a slight advantage of visual information in risk identification, though the benefit is limited. \textbf{c,} Relationship between model size and TRR for open-source models: general trend of decreasing TRR with increased model size, e.g., Llama 3.1-8B at 96.93\% vs Llama 3.1-70B at 95.51\%, with exceptions like DeepSeek-V2 at 96.7\% despite largest size. \textbf{d,} Comparison of consistency between automated evaluation and human evaluation: Using 200 randomly selected instances, each evaluated by five human annotators, we measured the agreement between automated and human evaluations using Cohen's Kappa. The Kappa value increases from 0.48 to 0.85 when safety tips are included in automated evaluation.}
+    \label{fig:analysis}
+\end{figure}
+
+\subsubsection{Overall Comparison Across Various Foundation Models and Domains}
+Fig. \ref{fig:res_overall} provides a comprehensive overview of the TRR and TER for various foundation models. The left side of the dotted line shows results for open-source models, while the right side displays closed-source models. 
+The results reveal a consistently high Task Risk Rate (TRR) across all evaluated models, with an average TRR of 95.75\%. This alarmingly high TRR indicates that the vast majority of plans generated by these models contain potential risks, demonstrating a concerning lack of risk awareness across the board.
+Even the best-performing model (Gemini 1.5 Flash) exhibits a TRR of 93.67\%, which is still considerably high for safety-critical applications. 
+The TRR remains elevated across both open-source and closed-source models, ranging from approximately 93\% to 98\%, with minimal variation between different model architectures and sizes.
+Notably, the results indicate that there is no significant difference in risk awareness between open-source and closed-source models, which will be further analyzed later. This suggests that proprietary training techniques employed by closed-source models have not resulted in substantially improved risk recognition capabilities.
+Furthermore, the results reveal a concerning trend: larger and more advanced models do not necessarily demonstrate better risk awareness. For instance, GPT-4o, despite being one of the most state-of-the-art models, still exhibits a high TRR of 94.03\%.
+Examining the Task Effectiveness Rate (TER), we observe that most models maintain relatively high effectiveness, typically ranging from 80\% to 95\%. For instance, Llama 3.1-70B shows a TER of 94.24\%, while GPT-4o achieves 96.53\%. This high task effectiveness rate coupled with high risk rate suggests that models are adept at generating executable plans but struggle to incorporate safety considerations.
+The domain-specific analysis in Fig. \ref{fig:res_domain} further emphasizes the pervasive nature of this issue. Across all seven domains (Home, Commercial, Medical, Science, Industrial, Education, and Entertainment), the TRR consistently hovers around or above 90\%. For example, in the Medical domain, critical for patient safety, models like Mixtral-8x7B and Claude 3 Haiku still show TRRs above 95\%.
+
+
+
+\subsubsection{Comparison between Open-source and Closed-source Models}
+Fig. \ref{fig:analysis}a further reveals a subtle distinction in Task Risk Rate (TRR) between open-source and closed-source models. Open-source models exhibit a slightly higher average TRR of approximately 96.38\%, with tightly clustered individual data points indicating consistent performance. Closed-source models show a marginally lower average TRR of about 94.86\%, suggesting a slight improvement in risk awareness. However, they display greater variability in performance, as evidenced by the wider spread of data points and larger error bars. Despite this minor difference, both categories maintain alarmingly high TRRs above 90\%, underscoring that the vast majority of plans generated by all models contain potential risks. This comparison highlights that while closed-source models may have a slight edge, possibly due to proprietary techniques, the fundamental challenge of high risk rates in AI-generated plans for EAI tasks remains largely unresolved across both model types.
+
+
+\subsubsection{Comparison between Textual and Visual Scenarios}
+We compare Task Risk Rate (TRR) between textual and visual scenarios for several multimodal VLMs. As illustrated in Fig. \ref{fig:analysis}b, the results shows a slight decrease in TRR for visual scenarios compared to textual ones, although the difference is minimal. Taking Gemini 1.5 Flash as an example, we observe a TRR of approximately 94.46\% for textual scenarios, which decreases to about 93.06\% for visual scenarios. Similarly, GPT-4o shows a reduction from roughly 94.53\% in textual scenarios to 93.52\% in visual scenarios. This trend is consistent across all evaluated VLMs.
+This slight improvement in visual scenarios suggests that the inclusion of visual information can provide additional contextual cues that aid in identifying potential risks. However, it's important to note that the difference is marginal where TRR remain consistently high (above 90\%) across both scenario types for all models, which indicates that while visual information offers a slight advantage, significant challenges in risk awareness exist regardless of the input modality.
+
+\subsubsection{Comparison between Various Model Sizes}
+Fig. \ref{fig:analysis}c illustrates the relationship between model size and Task Risk Rate (TRR) across various open-source models.
+The overall trend suggests a slight decrease in TRR as the number of model parameters increases, although this improvement is modest and not uniform across all models.
+The Llama series demonstrates the most noticeable decrease in TRR, from Llama 3.1-8B (96.93\%) to Llama 3.1-70B (95.51\%), showing a reduction of about 1.42\%. Similarly, the Qwen series exhibits a downward trend, with Qwen2-7B (96.59\%) decreasing to Qwen2-72B (95.56\%). The Mixtral series follows this trend as well, with Mixtral-8x7B (97.03\%) having a slightly higher TRR than Mixtral-8x22B (96.33\%). 
+However, DeepSeek-V2 stands out as an exception, exhibiting a higher TRR (96.7\%) than many smaller models despite having the largest number of parameters with 236B, which contradicts the overall trend. In summary, while increasing model size may lead to marginal improvements in risk awareness, this effect is neither substantial nor consistent across all models. Even the largest models maintain relatively high TRRs, suggesting that simply scaling up model size may not be sufficient to significantly enhance the risk awareness of foundation models in EAI tasks. Future research should explore alternative approaches beyond merely increasing parameter count to effectively address the challenge of physical risk in EAI systems.
+
+
+\subsubsection{Comparison of Consistency between Automated Evaluation and Human Evaluation}
+In this section, we examine the impact of incorporating safety tips into automated safety evaluation for EAI tasks. We focus on the correlation between automated and human evaluations, specifically comparing whether safety tips enhance assessment consistency. We randomly select 200 instances, each evaluated by five human annotators. The plans are classified as unsafe if at least three annotators identified potential risks. The agreement between human and automated evaluations was measured using Cohen's Kappa coefficient, as illustrated in Fig. \ref{fig:analysis}d. The results demonstrate a significant improvement in assessment consistency when safety tips are included. Without safety tips, the Cohen's Kappa value is approximately 0.48, indicating moderate agreement. However, with the incorporation of safety tips, the Cohen's Kappa value increases substantially to about 0.85, suggesting strong alignment between automated and human assessments. This marked improvement indicates that safety tips provide crucial context, enabling automated safety evaluation to more accurately identify potential risks in a manner that closely mirrors human expert judgment.
+
+
+
+
+
+\begin{figure}[!tbp]
+    \centering
+    \includegraphics[width=\linewidth]{nmi_content/figs/res_mitigation.pdf}
+    \caption{\textbf{Evaluation of risk mitigation strategies for EAI task planning.}  \textbf{a,} Implicit risk mitigation strategy (RM-Implicit) uses general safety reminders in the prompt. \textbf{b,} Explicit risk mitigation strategy (RM-Explicit) provides specific safety tips in the prompt. \textbf{c,} Comparison of Task Risk Rates (TRR) across various models under different risk mitigation strategies. Both strategies reduce TRR, with the explicit strategy consistently outperforming the implicit one. Advanced closed-source models like GPT-4o and Claude 3 Haiku demonstrate larger TRR reductions with the explicit strategy, likely due to their enhanced understanding and reasoning capabilities. However, even the best-performing model (GPT-4o) maintains a TRR above 40\% with explicit risk mitigation.}
+    \label{fig:mitigation}
+\end{figure}
+
+
+\subsection{Evaluation of Risk Mitigation Strategies}
+To enhance the safety of foundation models in EAI task planning, we propose two risk mitigation strategies based on prompting techniques. As illustrated in Fig. \ref{fig:mitigation}a-b, these strategies aim to improve the model's awareness of potential risks during plan generation.
+The first strategy, termed Implicit Risk Mitigation (RM-Implicit), involves subtly reminding the model to consider safety aspects while generating plans. This is achieved by including a general cautionary statement in the task instruction, such as ``please note that the plans should not contain any unsafe actions that may cause physical risks...''
+The second strategy, Explicit Risk Mitigation (RM-Explicit), takes a more direct approach by providing specific safety tips that the model should not violate. 
+
+Fig. \ref{fig:mitigation}c presents a comprehensive comparison of these strategies across various models in textual scenarios. The results reveal that both strategies generally reduce the Task Risk Rate (TRR) across all models, indicating their effectiveness in improving risk identification and avoidance. However, the explicit risk mitigation strategy consistently outperforms the implicit strategy, often leading to a more substantial reduction in TRR. For instance, in the case of Llama 3.1-70B, the explicit strategy reduces TRR from about 95.51\% to approximately 67.85\%, while the implicit strategy only achieves a reduction to about 90.57\%.
+Notably, the effectiveness of these strategies varies among different models. More advanced closed-source models demonstrate larger decreases in TRR when employing the explicit strategy. For instance, GPT-4o achieves a remarkably low TRR of about 45.64\% with the explicit strategy, while Claude 3 Haiku shows a significant reduction from about 95.12\% to approximately 66.34\%. This superior performance of advanced closed-source models can be attributed to their enhanced understanding and reasoning capabilities, allowing them to more effectively interpret and apply the explicit safety guidelines provided. These findings highlight the potential of prompt engineering in enhancing the safety of EAI agents. 
+
+However, it is important to note that even the best-performing model, GPT-4o, still maintains a TRR above 40\% with the explicit risk mitigation strategy, which are unsatisfied for real-world deployments.
+existing substantial safety concerns if these EAI agents were to be implemented in physical environments
+This gap between current capabilities and the stringent safety requirements for real-world applications highlights the need for continued research and development of more advanced and effective safety enhancement strategies for EAI systems.
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\linewidth]{nmi_content/figs/case.pdf}
+    \caption{\textbf{Visualizations of cases from different domains.} \textbf{a,} Home scenario: microwaving food in aluminum foil. \textbf{b,} Medical scenario: disposing of biohazardous waste. \textbf{c,} Industrial scenario: welding near flammable materials. Each case present safety tip, task instructions, environmental context, and model responses without risk mitigation (w/o RM), with implicit risk mitigation (w/ RM-Implicit), and with explicit risk mitigation (w/ RM-Explicit). Safety evaluation (safe/unsafe) are indicated for each model response.}
+    \label{fig:case}
+\end{figure}
+
+\subsection{Case Study}
+To better understand the performance of different EAI agents in task planning, we conduct detailed case studies using multiple test instances from the \datasetname. Fig. \ref{fig:case} illustrates three representative cases from our dataset, including home, medical, and industrial domains. Each case includes the safety tip, detailed scene information, task instruction, multimodal scene observation and a comparison of plans produced by various models using distinct strategies. We carefully analyze how different strategies influenced the quality of the outcomes. These cases provides insights into the effectiveness and limitations of risk mitigation approaches and highlights the challenges in developing safe EAI systems across diverse environments.
+
+\textbf{a. Home Environment: Kitchen.}
+Fig. \ref{fig:case}a shows a kitchen scenario, representing a common household risk in a home environment that EAI agents might encounter. The task involves placing a pie wrapped in aluminum foil in a microwave. The safety tip clearly warns against heating food in aluminum foil containers in a microwave due to the risk of arcing and potential fire hazards. The scene information provides a detailed description of the objects (\eg microwave, pie), their positions (\eg pie on the island), and attributes (\eg microwave's door is closed). Textual observation and visual observation provides detailed description of the kitchen in different modalities. We compare the performance of GPT-4o under different risk mitigation strategies. Without any risk mitigation strategy, GPT-4o generates unsafe plans, directly instructing to ``Place the pie\_1 wrapped in aluminum foil in the microwave\_1''. If implicit risk mitigation strategy is exploited, the model shows improvement, suggesting to ``Remove the aluminum foil wrapping\_1 from the pie\_1''. Furthermore, the explicit risk mitigation strategy yields safe plans with explanation. This progression demonstrates the varying effectiveness of different risk mitigation strategies.
+
+\textbf{b. Medical Environment: Hospital Ward.}
+Fig. \ref{fig:case}b depicts a hospital scenario, representing the medical domain. This case involves the task of disposing of used syringes, accompanied by a safety tip warning against placing biohazardous waste in regular trash. The performance of Llama 3.1-8B across different risk mitigation strategies remains consistently unsatisfactory in this scenario.
+Without any mitigation strategy, the model unsafely suggests placing used syringes in regular trash. While the implicit strategy prompts the model to output a warning, the content of this warning still contains unsafe actions. Although the model configured with an explicit strategy outputs the correct warning, it is sequenced after the dangerous step and is therefore evaluated as unsafe. These examples demonstrates the limitation of proposed risk mitigation strategies: these strategies is closely tied to the basic capabilities of the foundation model and may not be consistently effective for all models.
+
+\textbf{c. Industrial Environment: Building Site.}
+Fig. \ref{fig:case}c illustrates a building site scenario. The task instruction is welding metal beams near the wooden pallets, presenting a clear fire hazard. In this case, Gemini 1.5 Flash  generates dangerous plans that disregard the proximity of flammable materials to the welding area without explicit prompting strategy. Such unsafe plans in industrial settings can easily lead to catastrophic accidents, highlighting the critical importance of improving risk awareness of EAI agents in high-risk work environments.
+

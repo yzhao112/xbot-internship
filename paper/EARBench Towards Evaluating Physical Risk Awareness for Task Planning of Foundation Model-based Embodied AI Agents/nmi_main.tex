@@ -1,0 +1,150 @@
+
+
+
+
+
+
+
+ 
+\documentclass[sn-mathphys-num]{sn-jnl}%
+
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage{bm}
+
+\newcommand{\zzh}[1]{\textcolor{red}{[zzh: #1]}}
+\newcommand{\bz}[1]{\textcolor{red}{[wbz: #1]}}
+\newcommand{\ie}{\textit{i.e.},~}
+\newcommand{\eg}{\textit{e.g.},~}
+\newcommand{\etc}{\textit{etc}}
+\newcommand{\wrt}{\textit{w.r.t.}}
+\newcommand{\leihan}[1]{{\color{red}{(han: #1)}}}
+
+\definecolor{dg}{HTML}{388E3C}
+\definecolor{lg}{HTML}{E8F5E9}
+\definecolor{dr}{HTML}{C00000}
+\definecolor{lr}{HTML}{FFCDD2}
+
+\definecolor{darkblue}{rgb}{0.0, 0.22, 0.66}
+\definecolor{harvardcrimson}{rgb}{0.79, 0.0, 0.09}
+\definecolor{lightmauve}{rgb}{0.86, 0.82, 1.0}
+\definecolor{citecolor}{HTML}{2980b9}
+\definecolor{linkcolor}{HTML}{c0392b}
+\definecolor{lightpurple}{HTML}{D1C4E9}
+\definecolor{lightorange}{HTML}{FFCC80}
+\definecolor{lightblue}{HTML}{81D4FA}
+
+\newcommand{\dg}[1]{\textcolor{dg}{#1}}
+\newcommand{\dr}[1]{\textcolor{dr}{#1}}
+
+\newcommand{\benchname}{EARBench }
+\newcommand{\datasetname}{EARDataset }
+
+\newcommand{\benchnameend}{EARBench}
+\newcommand{\datasetnameend}{EARDataset}
+
+
+\newcommand\hlblue{\bgroup\markoverwith
+  {\textcolor{lightblue}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+\newcommand\hlorange{\bgroup\markoverwith
+  {\textcolor{lightorange}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+\newcommand\hlpurple{\bgroup\markoverwith
+  {\textcolor{lightpurple}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+
+
+  
+
+
+\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%
+\newtheorem{proposition}[theorem]{Proposition}%
+
+\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+
+
+
+\begin{document}
+
+\title[Article Title]{EARBench: Towards Evaluating Physical Risk Awareness for Task Planning of Foundation Model-based Embodied AI Agents}
+
+\author[1]{\fnm{Zihao} \sur{Zhu}}\email{zihaozhu@link.cuhk.edu.cn}
+
+\author*[2]{\fnm{Bingzhe} \sur{Wu}}\email{bingzhewu@tencent.com}
+
+\author[3]{\fnm{Zhengyou} \sur{Zhang}}\email{zhengyou@tencent.com}
+
+\author[3]{\fnm{Lei} \sur{Han}}\email{leihan.cs@gmail.com}
+
+\author[4]{\fnm{Qingshan} \sur{Liu}}\email{qsliu@njupt.edu.cn}
+
+\author*[1]{\fnm{Baoyuan} \sur{Wu}}\email{wubaoyuan@cuhk.edu.cn}
+
+
+\affil[1]{\orgdiv{School of Data Science}, \orgname{The Chinese University of Hong Kong}, \orgaddress{\city{Shenzhen},  \state{Guangdong}, \postcode{518172}, \country{P.R. China}}}
+
+\affil[2]{\orgdiv{AI Lab}, \orgname{Tencent}, \orgaddress{\city{Shenzhen},  \state{Guangdong}, \postcode{518054}, \country{P.R. China}}}
+
+\affil[3]{\orgdiv{Robotics X}, \orgname{Tencent}, \orgaddress{\city{Shenzhen}, \state{Guangdong}, \postcode{518054}, \country{P.R. China}}}
+
+\affil[4]{\orgname{Nanjing University of Posts and Telecommunications}, \orgaddress{\city{Nanjing}, \state{Jiangsu}, \postcode{210003}, \country{P.R. China}}}
+
+
+\abstract{
+Embodied artificial intelligence (EAI) integrates advanced AI models into physical entities for real-world interaction. The emergence of foundation models as the ``brain'' of EAI agents for high-level task planning has shown promising results. However, the deployment of these agents in physical environments presents significant safety challenges. For instance, a housekeeping robot lacking sufficient risk awareness might place a metal container in a microwave, potentially causing a fire. To address these critical safety concerns, comprehensive pre-deployment risk assessments are imperative. This study introduces the first embodied AI risk benchmark (\benchnameend), a novel framework for automated physical risk assessment in EAI scenarios. \benchname employs a multi-agent cooperative system that leverages various foundation models to generate safety guidelines, create risk-prone scenarios, make task planning, and evaluate safety systematically. Utilizing this framework, we construct \datasetnameend, comprising diverse test cases across various domains, encompassing both textual and visual scenarios.
+Our comprehensive evaluation of state-of-the-art foundation models reveals alarming results: all models exhibit high task risk rates (TRR), with an average of 95.75\% across all evaluated models. Notably, even GPT-4o, widely regarded as one of the most advanced models, demonstrates a TRR of 94.03\%, underscoring the pervasive lack of risk identification and avoidance capabilities in complex physical environments. 
+To address these challenges, we further propose two prompting-based risk mitigation strategies. While these strategies demonstrate some efficacy in reducing TRR, the improvements are limited, still indicating substantial safety concerns.
+This study provides the first large-scale assessment of physical risk awareness in EAI agents. Our findings underscore the critical need for enhanced safety measures in EAI systems and provide valuable insights for future research directions in developing safer embodied artificial intelligence system. 
+Data and code are available at \url{https://github.com/zihao-ai/EARBench}.
+}
+
+\keywords{Embodied artificial intelligence, AI safety, Foundation models, Large language models, AI agents}
+
+
+
+\maketitle
+
+\input{nmi_content/introduction}
+
+\input{nmi_content/results}
+
+\input{nmi_content/discussion}
+
+\input{nmi_content/methods}
+
+
+
+
+
+
+
+
+
+
+
+\bibliography{reference}%
+
+
+\end{document}
