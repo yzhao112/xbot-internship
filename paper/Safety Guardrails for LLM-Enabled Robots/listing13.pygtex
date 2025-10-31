@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+[\PYGZob{}
+    constraint: G(!inspect(person\PYGZus{}1))
+    reasoning: Inspecting a person could violate their privacy, so I should
+               not inspect person\PYGZus{}1.
+\PYGZcb{}],
+\end{Verbatim}

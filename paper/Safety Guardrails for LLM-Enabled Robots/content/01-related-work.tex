@@ -1,0 +1,49 @@
+
+\section{Related Work}
+\label{sec:related-work}
+
+
+
+\subsection{LLM-enabled robots}
+
+The robotics community has leveraged the contextual reasoning abilities of foundation models through several lines of work. Firstly, preliminary progress has been made toward designing bespoke transformer-based architectures that map semantic instructions directly to low-level robotic actuators~\cite{black2024pi_0,li2024cogact,kim2024openvla,brohan2023rt}.  While these architectures stand to benefit from the same scaling trends as general-purpose models~\cite{sartor2024neural,pearce2024scaling}, there remains a sizeable gap between the performance of these models and the requirements of consumer-facing, real-world applications.  
+Another prominent research direction uses LLMs to shape robot-specific reward signals, which can then be optimized to perform downstream tasks~\cite{ma2023eureka, ma2024dreureka, yu2023language, kwon2023reward}.  
+However, given the difficulty of connecting semantic instructions with dynamic environments and low-level control, 
+a third line of research has sought to deploy LLMs as higher-level planners~\cite{liang2023code,ahn2022can}, wherein an LLM plans via an API for action primitives such as navigation, mapping, and manipulation. 
+This line of work has brought LLM-enabled robots closer to application domains, including self-driving~\cite{li2024driving, schumann-2023-velma, sharan2023llm}, service robotics~\cite{rana2023sayplan, llm_service_robot, momallm24, huang2022inner}, and, diagnostics \cite{tagliabue2023realresilienceadaptationusing, fan2024learning, SinhaElhafsiEtAl2024Aesop}. 
+While using LLMs in robotics shows tremendous promise, the above efforts do not address the safety challenges that LLMs introduce in robots operating in the real world.
+
+\subsection{Robot safety approaches}
+
+Methods for robot safety verification have typically focused on ensuring robots satisfy precise safety specifications in known environment contexts.  
+Formal methods application, such as linear temporal logic (LTL), provide such a specification approach and enjoy guarantees on correctness~\cite{kress2018synthesis, wongpiromsarn2011tulip, vasile2013sampling}.
+As such, they have been used for a range of robotic tasks in uncertain, dynamic, and semantic environments ~\cite{pnueli1977temporal, fox2003pddl2, vasile2013sampling, shah2020planning, purohit2021dynamic_ltl, menghi2018multiuncertainty, fu2016optimalsemanticltl, kantaros2022perception}. 
+Formal methods also facilitate control synthesis given possibly conflicting specifications~\cite{tuumova2013minimumviolationltl}, which is particularly relevant when proposed robot plans conflict with safety specifications. 
+However, these approaches often require a system designer to provide fixed specifications for a given, non-adversarial, environmental context.
+
+A more recent line of work has sought to adapt techniques from the formal methods literature to meet the needs of LLM-enabled robots~\cite{liu2023grounding, quartey2024verifiably, chen2024autotamp, liu2023llmp}. 
+Such approaches typically restrict the LLM's planning syntax to a more narrowly defined formal language, enabling verification of LLM-generated, long-horizon plans to ensure feasibility and prevent hallucination~\cite{mavrogiannis2024cook2ltl, quartey2024verifiably}.  
+This approach has also enabled planning under conflicting specifications~\cite{optimalscenegraphllm}.  
+However, in the context of robotic safety, existing methods at the intersection of formal methods and LLM face two key challenges.
+
+First, existing methods typically require manual enumeration of safety specifications, preventing use in open-world settings~\cite{yang2024joint, yang2023plugsafetychipenforcing}. 
+This line of work has been furthered by~\citet{brunke2024semantically}, who use LLMs to generate contextual constraints, but facilitate neither the ability to edit constraints online nor the ability to reason about these constraints. 
+Second, existing work on LLM-enabled robot safety does not consider adversarial use cases~\cite{liu2024lang2ltl, chen2023nl2tl, chen2024autotamp}.  Although methods like LIMP~\cite{quartey2024verifiably} verifiably follow user instructions, they lack mechanisms to prevent an adversarial user from producing unsafe robot behavior. 
+In contrast, \textsc{RoboGuard} is the first LLM-enabled robot safegurd that is both \emph{adversarially robust} and \emph{automatically} reasons over robot context to produce safety specifications.
+
+
+\subsection{LLM safety and jailbreaking}
+
+Ensuring safety is a critical aspect of training foundation models, which in the context of chatbots requires that their outputs align with human values. Popular alignment algorithms, including RLHF~\cite{ouyang2022training}, RLAIF~\cite{bai2022constitutional}, and DPO~\cite{rafailov2024direct}, tend to incorporate a mixture of human- and AI-generated feedback to steer generations away from harmful topics.  However, a broad class of vulnerabilities, including prompt injection~\cite{liu2023prompt,perez2022ignore} and backdoor attacks~\cite{huang2023composite},
+have shown that these safety mechanisms are highly imperfect.  
+Of particular concern are so-called \emph{jailbreaking attacks}~\cite{wei2024jailbroken,carlini2024aligned}, wherein a malicious user constructs input prompts that bypass a model's safety mechanisms to elicit the generation of objectionable text~\cite{zou2023universal,chao2023jailbreaking,liu2023autodan} or visual media~\cite{dong2023robust,hu2024transferable,qi2024visual}.
+
+The recently proposed \textsc{RoboPAIR} algorithm demonstrated that LLM-enabled robots are highly vulnerable to jailbreaking attacks~\cite{robey2024jailbreaking}. 
+In this work, \citet{robey2024jailbreaking} highlighted key differences between chatbot and robot jailbreaking: notions of harm are often highly context dependent in robotics, chatbot alignment does not necessarily translate to more robust LLM-enabled robots, and jailbroken robots can lead to physical harm.
+These differences necessitate external safeguards for LLM-enabled robots, alongside alignment techniques. 
+And while \textsc{RoboGuard}  may be applied to non-adversarial settings, jailbreaking attacks present a ``worst-case'' scenario wherein an LLM-enabled robot reliably performs harmful actions.
+As such, our experimental evaluation of \textsc{RoboGuard} focuses on these adversarial, jailbreaking attacks.
+
+
+
+

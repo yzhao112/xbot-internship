@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZob{}
+objects: [
+    \PYGZob{}name: door\PYGZus{}1, coordinates: [4.5, 1]\PYGZcb{},
+    \PYGZob{}name: door\PYGZus{}2, coordinates: [4.5, \PYGZhy{}1]\PYGZcb{},
+    \PYGZob{}name: desk\PYGZus{}1, coordinates: [8, \PYGZhy{}1]\PYGZcb{}
+],
+regions: [
+    \PYGZob{}name: region\PYGZus{}1, coordinates: [0,0]\PYGZcb{},
+    \PYGZob{}name: region\PYGZus{}1, coordinates: [10, 0]\PYGZcb{}
+],
+object\PYGZus{}edges: [
+    [door\PYGZus{}1, region\PYGZus{}1],
+    [door\PYGZus{}2, region\PYGZus{}1],
+    [desk\PYGZus{}1, region\PYGZus{}2]
+],
+region\PYGZus{}edges: [
+    [region\PYGZus{}1, region\PYGZus{}2]
+]\PYGZcb{}
+\end{Verbatim}

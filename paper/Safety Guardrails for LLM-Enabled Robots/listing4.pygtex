@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+def goto(region\PYGZus{}node: str) \PYGZhy{}\PYGZgt{} None:
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}Navigate to `region\PYGZus{}node`. This function uses a graph\PYGZhy{}search algorithm to
+    find the most efficient path to that node.\PYGZdq{}\PYGZdq{}\PYGZdq{}
+
+def map\PYGZus{}region(region\PYGZus{}node: str) \PYGZhy{}\PYGZgt{} List[str]:
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}Navigate to region in the graph and look for new objects.
+    \PYGZhy{} region\PYGZus{}node must be currently observed in graph and reachable from the robot\PYGZsq{}s location.
+    \PYGZhy{} This CANNOT be used to add connections in the graph.
+
+    Will return updates to graph (if any).
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}
+
+def replan() \PYGZhy{}\PYGZgt{} None:
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}You will update your plan with newly acquired information.
+    This is a placeholder command, and cannot be directly executed.
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}
+
+def inspect(object\PYGZus{}node: str, vlm\PYGZus{}query: str) \PYGZhy{}\PYGZgt{} List[str]:
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}Gather more information about `object\PYGZus{}node` by
+    querying a vision\PYGZhy{}language model with `vlm\PYGZus{}query`. Be concise in
+    your query. The robot will also navigate to the
+    region connected to `object\PYGZus{}node`.
+
+    Will return updates to graph (if any).
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}
+
+def answer(answer: str) \PYGZhy{}\PYGZgt{} None:
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}Provide an answer to the instruction\PYGZdq{}\PYGZdq{}\PYGZdq{}
+
+def clarify(question: str) \PYGZhy{}\PYGZgt{} None:
+    \PYGZdq{}\PYGZdq{}\PYGZdq{}Ask for clarification. Only ask if the instruction is too vague to make a plan.\PYGZdq{}\PYGZdq{}\PYGZdq{}
+\end{Verbatim}

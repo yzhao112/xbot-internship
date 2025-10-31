@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+At each planning iteration, you will be given a semantic map in the form of a graph:
+\PYGZob{}
+    objects: [
+        \PYGZob{} name: object\PYGZus{}1\PYGZus{}name, coordinates: [x, y] \PYGZcb{},
+        ...
+    ],
+    regions: [
+        \PYGZob{} name: region\PYGZus{}1\PYGZus{}name, coordinates: [x, y] \PYGZcb{},
+        ...
+    ],
+    object\PYGZus{}edges: [
+        [object\PYGZus{}name, region\PYGZus{}name],
+        ...
+    ],
+    region\PYGZus{}edges: [
+        [some\PYGZus{}region\PYGZus{}name,
+         other\PYGZus{}region\PYGZus{}name],
+        ...
+    ]
+\PYGZcb{}
+\end{Verbatim}

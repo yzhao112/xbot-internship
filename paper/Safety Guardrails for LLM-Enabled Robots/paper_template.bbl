@@ -1,0 +1,508 @@
+\begin{thebibliography}{98}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahn et~al.(2022)Ahn, Brohan, Brown, Chebotar, Cortes, David, Finn, Fu, Gopalakrishnan, Hausman, et~al.]{ahn2022can}
+Michael Ahn, Anthony Brohan, Noah Brown, Yevgen Chebotar, Omar Cortes, Byron David, Chelsea Finn, Chuyuan Fu, Keerthana Gopalakrishnan, Karol Hausman, et~al.
+\newblock \href{https://arxiv.org/pdf/2204.01691}{Do as I can, not as I say: Grounding language in robotic affordances}.
+\newblock \emph{arXiv preprint arXiv:2204.01691}, 2022.
+
+\bibitem[Ahn et~al.(2024)Ahn, Dwibedi, Finn, Arenas, Gopalakrishnan, Hausman, Ichter, Irpan, Joshi, Julian, et~al.]{ahn2024autort}
+Michael Ahn, Debidatta Dwibedi, Chelsea Finn, Montse~Gonzalez Arenas, Keerthana Gopalakrishnan, Karol Hausman, Brian Ichter, Alex Irpan, Nikhil Joshi, Ryan Julian, et~al.
+\newblock \href{https://arxiv.org/abs/2401.12963}{Autort: Embodied foundation models for large scale orchestration of robotic agents}.
+\newblock \emph{arXiv preprint arXiv:2401.12963}, 2024.
+
+\bibitem[Arenas et~al.(2024)Arenas, Xiao, Singh, Jain, Ren, Vuong, Varley, Herzog, Leal, Kirmani, et~al.]{arenas2024prompt}
+Montserrat~Gonzalez Arenas, Ted Xiao, Sumeet Singh, Vidhi Jain, Allen Ren, Quan Vuong, Jake Varley, Alexander Herzog, Isabel Leal, Sean Kirmani, et~al.
+\newblock \href{https://ieeexplore.ieee.org/document/10610784}{How to prompt your robot: A promptbook for manipulation skills with code as policies}.
+\newblock In \emph{2024 IEEE International Conference on Robotics and Automation (ICRA)}, pages 4340--4348. IEEE, 2024.
+
+\bibitem[{\AA}str{\"o}m(1995)]{aastrom1995adaptive}
+Karl~Johan {\AA}str{\"o}m.
+\newblock \href{}{Adaptive control}.
+\newblock In \emph{Mathematical System Theory: The Influence of RE Kalman}, pages 437--450. Springer, 1995.
+
+\bibitem[Bai et~al.(2022)Bai, Kadavath, Kundu, Askell, Kernion, Jones, Chen, Goldie, Mirhoseini, McKinnon, et~al.]{bai2022constitutional}
+Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhoseini, Cameron McKinnon, et~al.
+\newblock \href{https://arxiv.org/abs/2212.08073}{Constitutional ai: Harmlessness from ai feedback}.
+\newblock \emph{arXiv preprint arXiv:2212.08073}, 2022.
+
+\bibitem[Black et~al.(2024)Black, Brown, Driess, Esmail, Equi, Finn, Fusai, Groom, Hausman, Ichter, et~al.]{black2024pi_0}
+Kevin Black, Noah Brown, Danny Driess, Adnan Esmail, Michael Equi, Chelsea Finn, Niccolo Fusai, Lachy Groom, Karol Hausman, Brian Ichter, et~al.
+\newblock \href{https://arxiv.org/abs/2410.24164}{ $\pi_0 $: A Vision-Language-Action Flow Model for General Robot Control}.
+\newblock \emph{arXiv preprint arXiv:2410.24164}, 2024.
+
+\bibitem[Brohan et~al.(2023)Brohan, Brown, Carbajal, Chebotar, Chen, Choromanski, Ding, Driess, Dubey, Finn, et~al.]{brohan2023rt}
+Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Xi~Chen, Krzysztof Choromanski, Tianli Ding, Danny Driess, Avinava Dubey, Chelsea Finn, et~al.
+\newblock \href{https://arxiv.org/abs/2307.15818}{Rt-2: Vision-language-action models transfer web knowledge to robotic control}.
+\newblock \emph{arXiv preprint arXiv:2307.15818}, 2023.
+
+\bibitem[Brunke et~al.(2024)Brunke, Zhang, R{\"o}mer, Naimer, Staykov, Zhou, and Schoellig]{brunke2024semantically}
+Lukas Brunke, Yanni Zhang, Ralf R{\"o}mer, Jack Naimer, Nikola Staykov, Siqi Zhou, and Angela~P Schoellig.
+\newblock \href{https://arxiv.org/pdf/2410.15185}{Semantically Safe Robot Manipulation: From Semantic Scene Understanding to Motion Safeguards}.
+\newblock \emph{arXiv preprint arXiv:2410.15185}, 2024.
+
+\bibitem[Cao et~al.(2019)Cao, Xiao, Cyr, Zhou, Park, Rampazzi, Chen, Fu, and Mao]{adversarial_lidar}
+Yulong Cao, Chaowei Xiao, Benjamin Cyr, Yimeng Zhou, Won Park, Sara Rampazzi, Qi~Alfred Chen, Kevin Fu, and Z.~Morley Mao.
+\newblock \href{https://arxiv.org/abs/1907.06826}{Adversarial Sensor Attack on LiDAR-based Perception in Autonomous Driving}.
+\newblock CCS '19, page 2267–2281, New York, NY, USA, 2019. Association for Computing Machinery.
+\newblock ISBN 9781450367479.
+\newblock \doi{10.1145/3319535.3339815}.
+\newblock URL \url{https://doi.org/10.1145/3319535.3339815}.
+
+\bibitem[Carlini et~al.(2024)Carlini, Nasr, Choquette-Choo, Jagielski, Gao, Koh, Ippolito, Tramer, and Schmidt]{carlini2024aligned}
+Nicholas Carlini, Milad Nasr, Christopher~A Choquette-Choo, Matthew Jagielski, Irena Gao, Pang Wei~W Koh, Daphne Ippolito, Florian Tramer, and Ludwig Schmidt.
+\newblock \href{https://arxiv.org/abs/2306.15447}{Are aligned neural networks adversarially aligned?}
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Carlsmith(2023)]{carlsmith2023scheming}
+Joe Carlsmith.
+\newblock \href{https://arxiv.org/abs/2311.08379}{Scheming AIs: Will AIs fake alignment during training in order to get power?}
+\newblock \emph{arXiv preprint arXiv:2311.08379}, 2023.
+
+\bibitem[Chao et~al.(2023)Chao, Robey, Dobriban, Hassani, Pappas, and Wong]{chao2023jailbreaking}
+Patrick Chao, Alexander Robey, Edgar Dobriban, Hamed Hassani, George~J Pappas, and Eric Wong.
+\newblock \href{https://arxiv.org/abs/2310.08419}{Jailbreaking black box large language models in twenty queries}.
+\newblock \emph{arXiv preprint arXiv:2310.08419}, 2023.
+
+\bibitem[Chao et~al.(2024)Chao, Debenedetti, Robey, Andriushchenko, Croce, Sehwag, Dobriban, Flammarion, Pappas, Tramer, et~al.]{chao2024jailbreakbench}
+Patrick Chao, Edoardo Debenedetti, Alexander Robey, Maksym Andriushchenko, Francesco Croce, Vikash Sehwag, Edgar Dobriban, Nicolas Flammarion, George~J Pappas, Florian Tramer, et~al.
+\newblock \href{https://arxiv.org/pdf/2404.01318}{Jailbreakbench: An open robustness benchmark for jailbreaking large language models}.
+\newblock \emph{arXiv preprint arXiv:2404.01318}, 2024.
+
+\bibitem[Chen et~al.(2022)Chen, Xia, Ichter, Rao, Gopalakrishnan, Ryoo, Stone, and Kappler]{chen2022nlmapsaycan}
+Boyuan Chen, Fei Xia, Brian Ichter, Kanishka Rao, Keerthana Gopalakrishnan, Michael~S. Ryoo, Austin Stone, and Daniel Kappler.
+\newblock \href{}{Open-vocabulary Queryable Scene Representations for Real World Planning}.
+\newblock In \emph{arXiv preprint arXiv:2209.09874}, 2022.
+
+\bibitem[Chen et~al.(2023)Chen, Gandhi, Zhang, and Fan]{chen2023nl2tl}
+Yongchao Chen, Rujul Gandhi, Yang Zhang, and Chuchu Fan.
+\newblock \href{}{NL2TL: Transforming Natural Languages to Temporal Logics using Large Language Models}.
+\newblock \emph{arXiv preprint arXiv:2305.07766}, 2023.
+
+\bibitem[Chen et~al.(2024)Chen, Arkin, Dawson, Zhang, Roy, and Fan]{chen2024autotamp}
+Yongchao Chen, Jacob Arkin, Charles Dawson, Yang Zhang, Nicholas Roy, and Chuchu Fan.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10611163}{Autotamp: Autoregressive task and motion planning with llms as translators and checkers}.
+\newblock In \emph{2024 IEEE International conference on robotics and automation (ICRA)}, pages 6695--6702. IEEE, 2024.
+
+\bibitem[Clarke et~al.(2001)Clarke, Grumberg, and Peled]{model_checking_book}
+Edmund Clarke, Orna Grumberg, and Doron Peled.
+\newblock \emph{Model Checking}.
+\newblock 01 2001.
+\newblock ISBN 978-0-262-03270-4.
+
+\bibitem[Dai et~al.(2024)Dai, Asgharivaskasi, Duong, Lin, Tzes, Pappas, and Atanasov]{optimalscenegraphllm}
+Zhirui Dai, Arash Asgharivaskasi, Thai Duong, Shusen Lin, Maria-Elizabeth Tzes, George Pappas, and Nikolay Atanasov.
+\newblock \href{https://arxiv.org/pdf/2309.09182}{Optimal Scene Graph Planning with Large Language Model Guidance}.
+\newblock In \emph{2024 IEEE International Conference on Robotics and Automation (ICRA)}, pages 14062--14069, 2024.
+\newblock \doi{10.1109/ICRA57147.2024.10610599}.
+
+\bibitem[Dong et~al.(2023)Dong, Chen, Chen, Fang, Yang, Zhang, Tian, Su, and Zhu]{dong2023robust}
+Yinpeng Dong, Huanran Chen, Jiawei Chen, Zhengwei Fang, Xiao Yang, Yichi Zhang, Yu~Tian, Hang Su, and Jun Zhu.
+\newblock \href{https://arxiv.org/abs/2309.11751}{How Robust is Google's Bard to Adversarial Image Attacks?}
+\newblock \emph{arXiv preprint arXiv:2309.11751}, 2023.
+
+\bibitem[Duret-Lutz(2013)]{spot_ltl}
+Alexandre Duret-Lutz.
+\newblock \href{https://www.lre.epita.fr/dload/papers/duret.13.atva.pdf}{Manipulating {LTL} formulas using {Spot} 1.0}.
+\newblock In \emph{Proceedings of the 11th International Symposium on Automated Technology for Verification and Analysis (ATVA'13)}, volume 8172 of \emph{Lecture Notes in Computer Science}, pages 442--445, Hanoi, Vietnam, October 2013. Springer.
+\newblock \doi{10.1007/978-3-319-02444-8_31}.
+
+\bibitem[Fan et~al.(2024)Fan, Wang, Zhao, Zhao, Ivanovic, Wang, Pavone, and Yang]{fan2024learning}
+Zhiwen Fan, Pu~Wang, Yang Zhao, Yibo Zhao, Boris Ivanovic, Zhangyang Wang, Marco Pavone, and Hao~Frank Yang.
+\newblock \href{https://arxiv.org/pdf/2406.10789v1}{Learning Traffic Crashes as Language: Datasets, Benchmarks, and What-if Causal Analyses}.
+\newblock \emph{arXiv preprint arXiv:2406.10789}, 2024.
+
+\bibitem[Fox and Long(2003)]{fox2003pddl2}
+Maria Fox and Derek Long.
+\newblock \href{https://www.jair.org/index.php/jair/article/view/10352/24759}{PDDL2. 1: An extension to PDDL for expressing temporal planning domains}.
+\newblock \emph{Journal of artificial intelligence research}, 20:\penalty0 61--124, 2003.
+
+\bibitem[Fu et~al.(2016)Fu, Atanasov, Topcu, and Pappas]{fu2016optimalsemanticltl}
+Jie Fu, Nikolay Atanasov, Ufuk Topcu, and George~J Pappas.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7487554}{Optimal temporal logic planning in probabilistic semantic maps}.
+\newblock In \emph{2016 IEEE International Conference on Robotics and Automation (ICRA)}, pages 3690--3697. IEEE, 2016.
+
+\bibitem[Greenblatt et~al.(2024)Greenblatt, Roger, Krasheninnikov, and Krueger]{greenblatt2024stress}
+Ryan Greenblatt, Fabien Roger, Dmitrii Krasheninnikov, and David Krueger.
+\newblock \href{https://arxiv.org/abs/2405.19550}{Stress-Testing Capability Elicitation With Password-Locked Models}.
+\newblock \emph{arXiv preprint arXiv:2405.19550}, 2024.
+
+\bibitem[Gu et~al.(2024)Gu, Kuwajerwala, Morin, Jatavallabhula, Sen, Agarwal, Rivera, Paul, Ellis, Chellappa, Gan, {de Melo}, Tenenbaum, Torralba, Shkurti, and Paull]{conceptgraphs}
+Qiao Gu, Alihusein Kuwajerwala, Sacha Morin, {Krishna Murthy} Jatavallabhula, Bipasha Sen, Aditya Agarwal, Corban Rivera, William Paul, Kirsty Ellis, Rama Chellappa, Chuang Gan, {Celso Miguel} {de Melo}, {Joshua B.} Tenenbaum, Antonio Torralba, Florian Shkurti, and Liam Paull.
+\newblock \href{https://arxiv.org/pdf/2309.16650}{ConceptGraphs: Open-Vocabulary 3D Scene Graphs for Perception and Planning}.
+\newblock \emph{International Conference on Robotics and Automation}, 2024.
+
+\bibitem[Guarascio et~al.(2024)Guarascio, Piccirillo, and Reljic]{guarascio2024will}
+Dario Guarascio, Alessandro Piccirillo, and Jelena Reljic.
+\newblock \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4750618}{Will Robots Replace Workers? Assessing the Impact of Robots on Employment and Wages with Meta-Analysis}.
+\newblock \emph{Assessing the Impact of Robots on Employment and Wages with Meta-Analysis}, 2024.
+
+\bibitem[Honerkamp et~al.(2024)Honerkamp, Büchner, Despinoy, Welschehold, and Valada]{momallm24}
+Daniel Honerkamp, Martin Büchner, Fabien Despinoy, Tim Welschehold, and Abhinav Valada.
+\newblock \href{https://arxiv.org/pdf/2403.08605}{Language-Grounded Dynamic Scene Graphs for Interactive Object Search with Mobile Manipulation}.
+\newblock \emph{arXiv preprint arXiv:2403.08605}, 2024.
+
+\bibitem[Hu et~al.(2024{\natexlab{a}})Hu, Yu, Robey, Zou, Xu, Hu, and Fredrikson]{hu2024transferable}
+Kai Hu, Weichen Yu, Alexander Robey, Andy Zou, Chengming Xu, Haoqi Hu, and Matt Fredrikson.
+\newblock \href{https://openreview.net/forum?id=DYVSLfiyRN}{Transferable Adversarial Attack on Vision-enabled Large Language Models}.
+\newblock \emph{OpenReview}, 2024{\natexlab{a}}.
+\newblock URL \url{https://openreview.net/forum?id=DYVSLfiyRN}.
+
+\bibitem[Hu et~al.(2024{\natexlab{b}})Hu, Lucchetti, Schlesinger, Saxena, Freeman, Modak, Guha, and Biswas]{llm_service_robot}
+Zichao Hu, Francesca Lucchetti, Claire Schlesinger, Yash Saxena, Anders Freeman, Sadanand Modak, Arjun Guha, and Joydeep Biswas.
+\newblock \href{https://arxiv.org/pdf/2311.11183}{Deploying and Evaluating LLMs to Program Service Mobile Robots}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 2024{\natexlab{b}}.
+\newblock \doi{10.1109/LRA.2024.3360020}.
+
+\bibitem[Huang et~al.(2023)Huang, Zhao, Backes, Shen, and Zhang]{huang2023composite}
+Hai Huang, Zhengyu Zhao, Michael Backes, Yun Shen, and Yang Zhang.
+\newblock \href{https://arxiv.org/abs/2310.07676}{Composite backdoor attacks against large language models}.
+\newblock \emph{arXiv preprint arXiv:2310.07676}, 2023.
+
+\bibitem[Huang et~al.(2022)Huang, Xia, Xiao, Chan, Liang, Florence, Zeng, Tompson, Mordatch, Chebotar, Sermanet, Brown, Jackson, Luu, Levine, Hausman, and Ichter]{huang2022inner}
+Wenlong Huang, Fei Xia, Ted Xiao, Harris Chan, Jacky Liang, Pete Florence, Andy Zeng, Jonathan Tompson, Igor Mordatch, Yevgen Chebotar, Pierre Sermanet, Noah Brown, Tomas Jackson, Linda Luu, Sergey Levine, Karol Hausman, and Brian Ichter.
+\newblock \href{https://arxiv.org/abs/2207.05608}{Inner Monologue: Embodied Reasoning through Planning with Language Models}.
+\newblock In \emph{\href{}{arXiv preprint arXiv:2207.05608}}, 2022.
+
+\bibitem[Hughes et~al.(2024)Hughes, Chang, Hu, Talak, Abdulhai, Strader, and Carlone]{hughes2024foundations}
+Nathan Hughes, Yun Chang, Siyi Hu, Rajat Talak, Rumaia Abdulhai, Jared Strader, and Luca Carlone.
+\newblock \href{https://journals.sagepub.com/doi/full/10.1177/02783649241229725}{Foundations of spatial perception for robotics: Hierarchical representations and real-time systems}.
+\newblock \emph{The International Journal of Robotics Research}, page 02783649241229725, 2024.
+
+\bibitem[Inan et~al.(2023)Inan, Upasani, Chi, Rungta, Iyer, Mao, Tontchev, Hu, Fuller, Testuggine, et~al.]{inan2023llama}
+Hakan Inan, Kartikeya Upasani, Jianfeng Chi, Rashi Rungta, Krithika Iyer, Yuning Mao, Michael Tontchev, Qing Hu, Brian Fuller, Davide Testuggine, et~al.
+\newblock \href{https://arxiv.org/abs/2312.06674}{Llama guard: Llm-based input-output safeguard for human-ai conversations}.
+\newblock \emph{arXiv preprint arXiv:2312.06674}, 2023.
+
+\bibitem[Jain et~al.(2023)Jain, Schwarzschild, Wen, Somepalli, Kirchenbauer, Chiang, Goldblum, Saha, Geiping, and Goldstein]{jain2023baseline}
+Neel Jain, Avi Schwarzschild, Yuxin Wen, Gowthami Somepalli, John Kirchenbauer, Ping-yeh Chiang, Micah Goldblum, Aniruddha Saha, Jonas Geiping, and Tom Goldstein.
+\newblock \href{https://arxiv.org/abs/2309.00614}{Baseline defenses for adversarial attacks against aligned language models}.
+\newblock \emph{arXiv preprint arXiv:2309.00614}, 2023.
+
+\bibitem[Kantaros et~al.(2022)Kantaros, Kalluraya, Jin, and Pappas]{kantaros2022perception}
+Yiannis Kantaros, Samarth Kalluraya, Qi~Jin, and George~J Pappas.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9708724}{Perception-based temporal logic planning in uncertain semantic maps}.
+\newblock \emph{IEEE Transactions on Robotics}, 38\penalty0 (4):\penalty0 2536--2556, 2022.
+
+\bibitem[Kim et~al.(2024{\natexlab{a}})Kim, Lee, and Mutlu]{kim2024understanding}
+Callie~Y Kim, Christine~P Lee, and Bilge Mutlu.
+\newblock \href{https://arxiv.org/abs/2401.03217}{Understanding large-language model (llm)-powered human-robot interaction}.
+\newblock In \emph{Proceedings of the 2024 ACM/IEEE International Conference on Human-Robot Interaction}, pages 371--380, 2024{\natexlab{a}}.
+
+\bibitem[Kim et~al.(2024{\natexlab{b}})Kim, Zhao, Schmidgall, Deguet, Kobilarov, Finn, and Krieger]{kim2024surgical}
+Ji~Woong Kim, Tony~Z Zhao, Samuel Schmidgall, Anton Deguet, Marin Kobilarov, Chelsea Finn, and Axel Krieger.
+\newblock \href{https://arxiv.org/abs/2407.12998}{Surgical robot transformer (srt): Imitation learning for surgical tasks}.
+\newblock \emph{arXiv preprint arXiv:2407.12998}, 2024{\natexlab{b}}.
+
+\bibitem[Kim et~al.(2024{\natexlab{c}})Kim, Pertsch, Karamcheti, Xiao, Balakrishna, Nair, Rafailov, Foster, Lam, Sanketi, et~al.]{kim2024openvla}
+Moo~Jin Kim, Karl Pertsch, Siddharth Karamcheti, Ted Xiao, Ashwin Balakrishna, Suraj Nair, Rafael Rafailov, Ethan Foster, Grace Lam, Pannag Sanketi, et~al.
+\newblock \href{https://arxiv.org/abs/2406.09246}{OpenVLA: An Open-Source Vision-Language-Action Model}.
+\newblock \emph{arXiv preprint arXiv:2406.09246}, 2024{\natexlab{c}}.
+
+\bibitem[Koebler(2022)]{koebler2022robot}
+Jason Koebler.
+\newblock \href{https://www.vice.com/en/article/food-delivery-robot-casually-drives-under-police-tape-through-active-crime-scene}{Food Delivery Robot Casually Drives Under Police Tape, Through Active Crime Scene}.
+\newblock \emph{VICE}, September 2022.
+
+\bibitem[Kress-Gazit et~al.(2018)Kress-Gazit, Lahijanian, and Raman]{kress2018synthesis}
+Hadas Kress-Gazit, Morteza Lahijanian, and Vasumathi Raman.
+\newblock \href{https://www.annualreviews.org/content/journals/10.1146/annurev-control-060117-104838}{Synthesis for robots: Guarantees and feedback for robot behavior}.
+\newblock \emph{Annual Review of Control, Robotics, and Autonomous Systems}, 1\penalty0 (1):\penalty0 211--236, 2018.
+
+\bibitem[Kupferman and Vardi()]{kupferman2001model}
+Orna Kupferman and Moshe~Y Vardi.
+\newblock \href{https://www.cs.rice.edu/~vardi/papers/cav991.pdf}{Model checking of safety properties}.
+\newblock \emph{\href{}{Formal methods in system design}}, 19:\penalty0 291--314.
+
+\bibitem[Kwon et~al.(2023)Kwon, Xie, Bullard, and Sadigh]{kwon2023reward}
+Minae Kwon, Sang~Michael Xie, Kalesha Bullard, and Dorsa Sadigh.
+\newblock \href{https://arxiv.org/abs/2303.00001}{Reward design with language models}.
+\newblock \emph{arXiv preprint arXiv:2303.00001}, 2023.
+
+\bibitem[Li et~al.(2024{\natexlab{a}})Li, Wang, Mao, Ivanovic, Veer, Leung, and Pavone]{li2024driving}
+Boyi Li, Yue Wang, Jiageng Mao, Boris Ivanovic, Sushant Veer, Karen Leung, and Marco Pavone.
+\newblock \href{https://arxiv.org/pdf/2402.05932}{Driving everywhere with large language model policy adaptation}.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 14948--14957, 2024{\natexlab{a}}.
+
+\bibitem[Li et~al.(2024{\natexlab{b}})Li, Han, Steneker, Primack, Goodside, Zhang, Wang, Menghini, and Yue]{li2024llm}
+Nathaniel Li, Ziwen Han, Ian Steneker, Willow Primack, Riley Goodside, Hugh Zhang, Zifan Wang, Cristina Menghini, and Summer Yue.
+\newblock \href{https://arxiv.org/abs/2408.15221}{LLM defenses are not robust to multi-turn human jailbreaks yet}.
+\newblock \emph{arXiv preprint arXiv:2408.15221}, 2024{\natexlab{b}}.
+
+\bibitem[Li et~al.(2024{\natexlab{c}})Li, Liang, Wang, Luo, Chen, Liao, Wei, Deng, Xu, Zhang, et~al.]{li2024cogact}
+Qixiu Li, Yaobo Liang, Zeyu Wang, Lin Luo, Xi~Chen, Mozheng Liao, Fangyun Wei, Yu~Deng, Sicheng Xu, Yizhong Zhang, et~al.
+\newblock \href{https://arxiv.org/abs/2411.19650}{CogACT: A Foundational Vision-Language-Action Model for Synergizing Cognition and Action in Robotic Manipulation}.
+\newblock \emph{arXiv preprint arXiv:2411.19650}, 2024{\natexlab{c}}.
+
+\bibitem[Liang et~al.(2023)Liang, Huang, Xia, Xu, Hausman, Ichter, Florence, and Zeng]{liang2023code}
+Jacky Liang, Wenlong Huang, Fei Xia, Peng Xu, Karol Hausman, Brian Ichter, Pete Florence, and Andy Zeng.
+\newblock \href{https://arxiv.org/pdf/2209.07753}{Code as policies: Language model programs for embodied control}.
+\newblock In \emph{2023 IEEE International Conference on Robotics and Automation (ICRA)}, pages 9493--9500. IEEE, 2023.
+
+\bibitem[Lindemann and Dimarogonas(2018)]{lindemann2018control}
+Lars Lindemann and Dimos~V Dimarogonas.
+\newblock \href{https://www.semanticscholar.org/paper/Control-Barrier-Functions-for-Signal-Temporal-Logic-Lindemann-Dimarogonas/0a8878cc9a339e2f133436f1c1624d54a7cb30cd}{Control barrier functions for signal temporal logic tasks}.
+\newblock \emph{IEEE Control Systems Letters}, 3\penalty0 (1):\penalty0 96--101, 2018.
+
+\bibitem[Liu et~al.(2023{\natexlab{a}})Liu, Jiang, Zhang, Liu, Zhang, Biswas, and Stone]{liu2023llmp}
+Bo~Liu, Yuqian Jiang, Xiaohan Zhang, Qiang Liu, Shiqi Zhang, Joydeep Biswas, and Peter Stone.
+\newblock \href{https://arxiv.org/abs/2304.11477}{LLM+P: Empowering Large Language Models with Optimal Planning Proficiency}.
+\newblock \emph{\href{}{arXiv preprint arXiv:2304.11477}}, 2023{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2023{\natexlab{b}})Liu, Yang, Idrees, Liang, Schornstein, Tellex, and Shah]{liu2023grounding}
+Jason~Xinyu Liu, Ziyi Yang, Ifrah Idrees, Sam Liang, Benjamin Schornstein, Stefanie Tellex, and Ankit Shah.
+\newblock \href{https://proceedings.mlr.press/v229/liu23d/liu23d.pdf}{Grounding complex natural language commands for temporal tasks in unseen environments}.
+\newblock In \emph{Conference on Robot Learning}, pages 1084--1110. PMLR, 2023{\natexlab{b}}.
+
+\bibitem[Liu et~al.(2024)Liu, Shah, Konidaris, Tellex, and Paulius]{liu2024lang2ltl}
+Jason~Xinyu Liu, Ankit Shah, George Konidaris, Stefanie Tellex, and David Paulius.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10802696}{Lang2ltl-2: Grounding spatiotemporal navigation commands using large language and vision-language models}.
+\newblock In \emph{2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, pages 2325--2332. IEEE, 2024.
+
+\bibitem[Liu et~al.(2023{\natexlab{c}})Liu, Zeng, Ren, Li, Zhang, Yang, Li, Yang, Su, Zhu, et~al.]{liu2023groundingdino}
+Shilong Liu, Zhaoyang Zeng, Tianhe Ren, Feng Li, Hao Zhang, Jie Yang, Chunyuan Li, Jianwei Yang, Hang Su, Jun Zhu, et~al.
+\newblock \href{https://arxiv.org/abs/2303.05499}{Grounding dino: Marrying dino with grounded pre-training for open-set object detection}.
+\newblock \emph{arXiv preprint arXiv:2303.05499}, 2023{\natexlab{c}}.
+
+\bibitem[Liu et~al.(2023{\natexlab{d}})Liu, Xu, Chen, and Xiao]{liu2023autodan}
+Xiaogeng Liu, Nan Xu, Muhao Chen, and Chaowei Xiao.
+\newblock \href{https://arxiv.org/abs/2310.04451}{Autodan: Generating stealthy jailbreak prompts on aligned large language models}.
+\newblock \emph{arXiv preprint arXiv:2310.04451}, 2023{\natexlab{d}}.
+
+\bibitem[Liu et~al.(2023{\natexlab{e}})Liu, Deng, Li, Wang, Wang, Wang, Zhang, Liu, Wang, Zheng, et~al.]{liu2023prompt}
+Yi~Liu, Gelei Deng, Yuekang Li, Kailong Wang, Zihao Wang, Xiaofeng Wang, Tianwei Zhang, Yepang Liu, Haoyu Wang, Yan Zheng, et~al.
+\newblock \href{https://arxiv.org/abs/2306.05499}{Prompt Injection attack against LLM-integrated Applications}.
+\newblock \emph{arXiv preprint arXiv:2306.05499}, 2023{\natexlab{e}}.
+
+\bibitem[Ma et~al.(2023)Ma, Liang, Wang, Huang, Bastani, Jayaraman, Zhu, Fan, and Anandkumar]{ma2023eureka}
+Yecheng~Jason Ma, William Liang, Guanzhi Wang, De-An Huang, Osbert Bastani, Dinesh Jayaraman, Yuke Zhu, Linxi Fan, and Anima Anandkumar.
+\newblock \href{https://arxiv.org/pdf/2310.12931}{Eureka: Human-level reward design via coding large language models}.
+\newblock \emph{arXiv preprint arXiv:2310.12931}, 2023.
+
+\bibitem[Ma et~al.(2024)Ma, Liang, Wang, Wang, Zhu, Fan, Bastani, and Jayaraman]{ma2024dreureka}
+Yecheng~Jason Ma, William Liang, Hung-Ju Wang, Sam Wang, Yuke Zhu, Linxi Fan, Osbert Bastani, and Dinesh Jayaraman.
+\newblock \href{https://arxiv.org/pdf/2406.01967}{DrEureka: Language Model Guided Sim-To-Real Transfer}.
+\newblock \emph{arXiv preprint arXiv:2406.01967}, 2024.
+
+\bibitem[Mavrogiannis et~al.(2024)Mavrogiannis, Mavrogiannis, and Aloimonos]{mavrogiannis2024cook2ltl}
+Angelos Mavrogiannis, Christoforos Mavrogiannis, and Yiannis Aloimonos.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10611086}{Cook2LTL: Translating cooking recipes to LTL formulae using large language models}.
+\newblock In \emph{2024 IEEE International Conference on Robotics and Automation (ICRA)}, pages 17679--17686. IEEE, 2024.
+
+\bibitem[Mayne et~al.(2000)Mayne, Rawlings, Rao, and Scokaert]{mayne2000constrained}
+David~Q Mayne, James~B Rawlings, Christopher~V Rao, and Pierre~OM Scokaert.
+\newblock \href{https://www.semanticscholar.org/paper/Constrained-model-predictive-control%3A-Stability-and-Mayne-Rawlings/abe3167ff50408ea3b89890f63526c1f2fbd7087}{Constrained model predictive control: Stability and optimality}.
+\newblock \emph{Automatica}, 36\penalty0 (6):\penalty0 789--814, 2000.
+
+\bibitem[Menghi et~al.(2018)Menghi, Garcia, Pelliccione, and Tumova]{menghi2018multiuncertainty}
+Claudio Menghi, Sergio Garcia, Patrizio Pelliccione, and Jana Tumova.
+\newblock \href{https://link.springer.com/chapter/10.1007/978-3-319-95582-7_24}{Multi-robot LTL planning under uncertainty}.
+\newblock In \emph{International Symposium on Formal Methods}, pages 399--417. Springer, 2018.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright, Mishkin, Zhang, Agarwal, Slama, Ray, et~al.]{ouyang2022training}
+Long Ouyang, Jeffrey Wu, Xu~Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, et~al.
+\newblock \href{https://arxiv.org/abs/2203.02155}{Training language models to follow instructions with human feedback}.
+\newblock \emph{Advances in neural information processing systems}, 35:\penalty0 27730--27744, 2022.
+
+\bibitem[Pearce et~al.(2024)Pearce, Li, Chen, Vynnytska, Nie, Elhassan, Sen, Lee, Wang, Gati, et~al.]{pearce2024scaling}
+Jonathan Pearce, Yi~Li, Fang Chen, Yuliia Vynnytska, Danyi Nie, Houssam Elhassan, Aritra Sen, Tony Lee, Zhiqiang Wang, Naman Gati, et~al.
+\newblock \href{https://arxiv.org/abs/2411.04434}{Scaling Laws for Pre-training Agents and Tools}.
+\newblock \emph{arXiv preprint arXiv:2402.08352}, 2024.
+
+\bibitem[Perez and Ribeiro(2022)]{perez2022ignore}
+F{\'a}bio Perez and Ian Ribeiro.
+\newblock \href{https://arxiv.org/abs/2211.09527}{Ignore previous prompt: Attack techniques for language models}.
+\newblock \emph{arXiv preprint arXiv:2211.09527}, 2022.
+
+\bibitem[Pnueli(1977)]{pnueli1977temporal}
+Amir Pnueli.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4567924}{The temporal logic of programs}.
+\newblock In \emph{18th annual symposium on foundations of computer science (sfcs 1977)}, pages 46--57. IEEE, 1977.
+
+\bibitem[Purohit and Saha(2021)]{purohit2021dynamic_ltl}
+Priya Purohit and Indranil Saha.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9636399}{DT*: Temporal logic path planning in a dynamic environment}.
+\newblock In \emph{2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, pages 3627--3634. IEEE, 2021.
+
+\bibitem[Qi et~al.(2024)Qi, Huang, Panda, Henderson, Wang, and Mittal]{qi2024visual}
+Xiangyu Qi, Kaixuan Huang, Ashwinee Panda, Peter Henderson, Mengdi Wang, and Prateek Mittal.
+\newblock \href{https://arxiv.org/abs/2306.13213}{Visual adversarial examples jailbreak aligned large language models}.
+\newblock In \emph{Proceedings of the AAAI Conference on Artificial Intelligence}, volume~38, pages 21527--21536, 2024.
+
+\bibitem[Quartey et~al.(2024)Quartey, Rosen, Tellex, and Konidaris]{quartey2024verifiably}
+Benedixct Quartey, Eric Rosen, Stefanie Tellex, and George Konidaris.
+\newblock \href{https://arxiv.org/abs/2402.11498}{Verifiably Following Complex Robot Instructions with Foundation Models}.
+\newblock \emph{arXiv preprint arXiv:2402.11498}, 2024.
+
+\bibitem[Rafailov et~al.(2024)Rafailov, Sharma, Mitchell, Manning, Ermon, and Finn]{rafailov2024direct}
+Rafael Rafailov, Archit Sharma, Eric Mitchell, Christopher~D Manning, Stefano Ermon, and Chelsea Finn.
+\newblock \href{https://arxiv.org/abs/2305.18290}{Direct preference optimization: Your language model is secretly a reward model}.
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Rana et~al.(2023)Rana, Haviland, Garg, Abou-Chakra, Reid, and Suenderhauf]{rana2023sayplan}
+Krishan Rana, Jesse Haviland, Sourav Garg, Jad Abou-Chakra, Ian Reid, and Niko Suenderhauf.
+\newblock \href{https://arxiv.org/pdf/2307.06135}{SayPlan: Grounding Large Language Models using 3D Scene Graphs for Scalable Task Planning}.
+\newblock In \emph{7th Annual Conference on Robot Learning}, 2023.
+\newblock URL \url{https://openreview.net/forum?id=wMpOMO0Ss7a}.
+
+\bibitem[Ravichandran et~al.(2025)Ravichandran, Murali, Tzes, Pappas, and Kumar]{ravichandran_spine}
+Zachary Ravichandran, Varun Murali, Mariliza Tzes, George~J. Pappas, and Vijay Kumar.
+\newblock \href{https://arxiv.org/abs/2410.03035}{SPINE: Online Semantic Planning for Missions with Incomplete Natural Language Specifications in Unstructured Environments}.
+\newblock \emph{International Conference on Robotics and Automation (ICRA)}, 2025.
+
+\bibitem[Robey et~al.(2020)Robey, Hu, Lindemann, Zhang, Dimarogonas, Tu, and Matni]{robey2020learning}
+Alexander Robey, Haimin Hu, Lars Lindemann, Hanwen Zhang, Dimos~V Dimarogonas, Stephen Tu, and Nikolai Matni.
+\newblock \href{https://arxiv.org/abs/2004.03315}{Learning control barrier functions from expert demonstrations}.
+\newblock In \emph{2020 59th IEEE Conference on Decision and Control (CDC)}, pages 3717--3724. IEEE, 2020.
+
+\bibitem[Robey et~al.(2023)Robey, Wong, Hassani, and Pappas]{robey2023smoothllm}
+Alexander Robey, Eric Wong, Hamed Hassani, and George~J Pappas.
+\newblock \href{https://arxiv.org/pdf/2310.03684}{Smoothllm: Defending large language models against jailbreaking attacks}.
+\newblock \emph{arXiv preprint arXiv:2310.03684}, 2023.
+
+\bibitem[Robey et~al.(2025)Robey, Ravichandran, Kumar, Hassani, and Pappas]{robey2024jailbreaking}
+Alexander Robey, Zachary Ravichandran, Vijay Kumar, Hamed Hassani, and George~J. Pappas.
+\newblock \href{https://arxiv.org/pdf/2410.13691}{Jailbreaking LLM-Controlled Robots}.
+\newblock \emph{International Conference on Robotics and Automation (ICRA)}, 2025.
+
+\bibitem[Russinovich et~al.(2024)Russinovich, Salem, and Eldan]{russinovich2024great}
+Mark Russinovich, Ahmed Salem, and Ronen Eldan.
+\newblock \href{https://arxiv.org/abs/2404.01833}{Great, now write an article about that: The crescendo multi-turn LLM jailbreak attack}.
+\newblock \emph{arXiv preprint arXiv:2404.01833}, 2024.
+
+\bibitem[Sartor and Thompson(2024)]{sartor2024neural}
+Sebastian Sartor and Neil Thompson.
+\newblock \href{https://arxiv.org/abs/2405.14005}{Neural Scaling Laws for Embodied AI}.
+\newblock \emph{arXiv preprint arXiv:2405.14005}, 2024.
+
+\bibitem[Schmidgall et~al.(2024)Schmidgall, Kim, Kuntz, Ghazi, and Krieger]{schmidgall2024general}
+Samuel Schmidgall, Ji~Woong Kim, Alan Kuntz, Ahmed~Ezzat Ghazi, and Axel Krieger.
+\newblock \href{https://arxiv.org/abs/2401.00678}{General-purpose foundation models for increased autonomy in robot-assisted surgery}.
+\newblock \emph{Nature Machine Intelligence}, pages 1--9, 2024.
+
+\bibitem[Schumann et~al.(2023)Schumann, Zhu, Feng, Fu, Riezler, and Wang]{schumann-2023-velma}
+Raphael Schumann, Wanrong Zhu, Weixi Feng, Tsu-Jui Fu, Stefan Riezler, and William~Yang Wang.
+\newblock \href{}{VELMA: Verbalization Embodiment of LLM Agents for Vision and Language Navigation in Street View}.
+\newblock 2023.
+
+\bibitem[Shah et~al.(2020)Shah, Li, and Shah]{shah2020planning}
+Ankit Shah, Shen Li, and Julie Shah.
+\newblock \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9018240}{Planning with uncertain specifications (puns)}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 5\penalty0 (2):\penalty0 3414--3421, 2020.
+
+\bibitem[Shah et~al.(2023{\natexlab{a}})Shah, Equi, Osi\'{n}ski, Xia, Ichter, and Levine]{pmlr-v229-shah23c}
+Dhruv Shah, Michael~Robert Equi, B\l{}a\.{z}ej Osi\'{n}ski, Fei Xia, Brian Ichter, and Sergey Levine.
+\newblock \href{https://arxiv.org/abs/2310.10103}{Navigation with Large Language Models: Semantic Guesswork as a Heuristic for Planning}.
+\newblock In Jie Tan, Marc Toussaint, and Kourosh Darvish, editors, \emph{\href{}{Proceedings of The 7th Conference on Robot Learning}}, volume 229 of \emph{Proceedings of Machine Learning Research}, pages 2683--2699. PMLR, 06--09 Nov 2023{\natexlab{a}}.
+
+\bibitem[Shah et~al.(2023{\natexlab{b}})Shah, Osi\'nski, ichter, and Levine]{pmlr-v205-shah23b}
+Dhruv Shah, B\l{a}\.zej Osi\'nski, brian ichter, and Sergey Levine.
+\newblock \href{https://arxiv.org/abs/2207.04429}{LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action}.
+\newblock In Karen Liu, Dana Kulic, and Jeff Ichnowski, editors, \emph{\href{}{Proceedings of The 6th Conference on Robot Learning}}, volume 205 of \emph{Proceedings of Machine Learning Research}, pages 492--504. PMLR, 14--18 Dec 2023{\natexlab{b}}.
+
+\bibitem[Sharan et~al.(2023)Sharan, Pittaluga, Kumar B~G, and Chandraker]{sharan2023llm}
+SP~Sharan, Francesco Pittaluga, Vijay Kumar B~G, and Manmohan Chandraker.
+\newblock \href{https://arxiv.org/abs/2401.00125}{LLM-Assist: Enhancing Closed-Loop Planning with Language-Based Reasoning}.
+\newblock \emph{\href{}{arXiv preprint arXiv:2401.00125}}, 2023.
+
+\bibitem[Sinha et~al.(2024)Sinha, Elhafsi, Agia, Foutter, Schmerling, and Pavone]{SinhaElhafsiEtAl2024Aesop}
+Rohan Sinha, Amine Elhafsi, Christopher Agia, Matthew Foutter, Ed~Schmerling, and Marco Pavone.
+\newblock \href{https://arxiv.org/pdf/2407.08735}{Real-Time Anomaly Detection and Reactive Planning with Large Language Models}.
+\newblock In \emph{Robotics: Science and Systems}, 2024.
+
+\bibitem[Strobel et~al.(2024)Strobel, Dorigo, and Fritz]{strobel2024llm2swarm}
+Volker Strobel, Marco Dorigo, and Mario Fritz.
+\newblock \href{https://arxiv.org/abs/2410.11387}{LLM2Swarm: Robot Swarms that Responsively Reason, Plan, and Collaborate through LLMs}.
+\newblock \emph{arXiv preprint arXiv:2410.11387}, 2024.
+
+\bibitem[Tagliabue et~al.(2023)Tagliabue, Kondo, Zhao, Peterson, Tewari, and How]{tagliabue2023realresilienceadaptationusing}
+Andrea Tagliabue, Kota Kondo, Tong Zhao, Mason Peterson, Claudius~T. Tewari, and Jonathan~P. How.
+\newblock \href{https://arxiv.org/pdf/2311.01403}{REAL: Resilience and Adaptation using Large Language Models on Autonomous Aerial Robots}.
+\newblock In \emph{Conference on Robot Learning}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2311.01403}.
+
+\bibitem[Tumova et~al.(2013)Tumova, Castro, Karaman, Frazzoli, and Rus]{tuumova2013minimumviolationltl}
+Jana Tumova, Luis I~Reyes Castro, Sertac Karaman, Emilio Frazzoli, and Daniela Rus.
+\newblock \href{https://arxiv.org/pdf/1303.3679}{Minimum-violation LTL planning with conflicting specifications}.
+\newblock In \emph{2013 American Control Conference}, pages 200--205. IEEE, 2013.
+
+\bibitem[Vasile and Belta(2013)]{vasile2013sampling}
+Cristian~Ioan Vasile and Calin Belta.
+\newblock \href{https://arxiv.org/pdf/1307.7263}{Sampling-based temporal logic path planning}.
+\newblock In \emph{2013 IEEE/RSJ International Conference on Intelligent Robots and Systems}, pages 4817--4822. IEEE, 2013.
+
+\bibitem[Wang et~al.(2024)Wang, Wu, Li, Jiang, Shu, Shi, Hu, Ma, Liu, Wang, et~al.]{wang2024large}
+Jiaqi Wang, Zihao Wu, Yiwei Li, Hanqi Jiang, Peng Shu, Enze Shi, Huawen Hu, Chong Ma, Yiheng Liu, Xuhui Wang, et~al.
+\newblock \href{https://arxiv.org/abs/2401.04334}{Large language models for robotics: Opportunities, challenges, and perspectives}.
+\newblock \emph{arXiv preprint arXiv:2401.04334}, 2024.
+
+\bibitem[Wei et~al.(2024)Wei, Haghtalab, and Steinhardt]{wei2024jailbroken}
+Alexander Wei, Nika Haghtalab, and Jacob Steinhardt.
+\newblock \href{https://arxiv.org/abs/2307.02483}{Jailbroken: How does llm safety training fail?}
+\newblock \emph{Advances in Neural Information Processing Systems}, 36, 2024.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, ichter, Xia, Chi, Le, and Zhou]{cot_llm}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, brian ichter, Fei Xia, Ed~Chi, Quoc~V Le, and Denny Zhou.
+\newblock \href{https://arxiv.org/abs/2201.11903}{Chain-of-Thought Prompting Elicits Reasoning in Large Language Models}.
+\newblock In S.~Koyejo, S.~Mohamed, A.~Agarwal, D.~Belgrave, K.~Cho, and A.~Oh, editors, \emph{Advances in Neural Information Processing Systems}, volume~35, pages 24824--24837. Curran Associates, Inc., 2022.
+
+\bibitem[Wongpiromsarn et~al.(2011)Wongpiromsarn, Topcu, Ozay, Xu, and Murray]{wongpiromsarn2011tulip}
+Tichakorn Wongpiromsarn, Ufuk Topcu, Necmiye Ozay, Huan Xu, and Richard~M Murray.
+\newblock \href{https://dl.acm.org/doi/abs/10.1145/1967701.1967747}{TuLiP: a software toolbox for receding horizon temporal logic planning}.
+\newblock In \emph{Proceedings of the 14th international conference on Hybrid systems: computation and control}, pages 313--314, 2011.
+
+\bibitem[Xie et~al.(2023)Xie, Zhang, Xu, Johnson-Roberson, and Bisk]{xie2023reasoning}
+Quanting Xie, Tianyi Zhang, Kedi Xu, Matthew Johnson-Roberson, and Yonatan Bisk.
+\newblock \href{https://arxiv.org/abs/2309.10103}{Reasoning about the Unseen for Efficient Outdoor Object Navigation}, 2023.
+
+\bibitem[Yang et~al.(2024)Yang, Ward, Hu, Biswas, and Topcu]{yang2024joint}
+Yunhao Yang, William Ward, Zichao Hu, Joydeep Biswas, and Ufuk Topcu.
+\newblock \href{https://arxiv.org/pdf/2410.14865}{Joint Verification and Refinement of Language Models for Safety-Constrained Planning}.
+\newblock \emph{arXiv preprint arXiv:2410.14865}, 2024.
+
+\bibitem[Yang et~al.(2023)Yang, Raman, Shah, and Tellex]{yang2023plugsafetychipenforcing}
+Ziyi Yang, Shreyas~S. Raman, Ankit Shah, and Stefanie Tellex.
+\newblock \href{https://arxiv.org/pdf/2309.09919}{Plug in the Safety Chip: Enforcing Constraints for LLM-driven Robot Agents}, 2023.
+\newblock URL \url{https://arxiv.org/abs/2309.09919}.
+
+\bibitem[Yu et~al.(2023)Yu, Gileadi, Fu, Kirmani, Lee, Arenas, Chiang, Erez, Hasenclever, Humplik, et~al.]{yu2023language}
+Wenhao Yu, Nimrod Gileadi, Chuyuan Fu, Sean Kirmani, Kuang-Huei Lee, Montse~Gonzalez Arenas, Hao-Tien~Lewis Chiang, Tom Erez, Leonard Hasenclever, Jan Humplik, et~al.
+\newblock \href{https://arxiv.org/abs/2306.08647}{Language to rewards for robotic skill synthesis}.
+\newblock \emph{arXiv preprint arXiv:2306.08647}, 2023.
+
+\bibitem[Zeng et~al.(2023)Zeng, Gan, Wang, Liu, and Yu]{zeng2023large}
+Fanlong Zeng, Wensheng Gan, Yongheng Wang, Ning Liu, and Philip~S Yu.
+\newblock \href{}{Large language models for robotics: A survey}.
+\newblock \emph{arXiv preprint arXiv:2311.07226}, 2023.
+
+\bibitem[Zhao et~al.(2019)Zhao, Zhu, Liang, Shen, Zhang, and Chen]{adversarial_object_detection}
+Yue Zhao, Hong Zhu, Ruigang Liang, Qintao Shen, Shengzhi Zhang, and Kai Chen.
+\newblock \href{https://dl.acm.org/doi/10.1145/3319535.3354259}{Seeing isn't Believing: Towards More Robust Adversarial Attack Against Real World Object Detectors}.
+\newblock In \emph{Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security}, CCS '19, page 1989–2004, New York, NY, USA, 2019. Association for Computing Machinery.
+\newblock ISBN 9781450367479.
+
+\bibitem[Zhou et~al.(2024)Zhou, Liu, Zhao, Compalas, Song, and Wang]{zhou2024multimodal}
+Kaiwen Zhou, Chengzhi Liu, Xuandong Zhao, Anderson Compalas, Dawn Song, and Xin~Eric Wang.
+\newblock \href{https://arxiv.org/abs/2410.06172}{Multimodal Situational Safety}.
+\newblock \emph{arXiv preprint arXiv:2410.06172}, 2024.
+
+\bibitem[Zhou and Doyle(1998)]{zhou1998essentials}
+Kemin Zhou and John~Comstock Doyle.
+\newblock \emph{\href{}{Essentials of robust control}}, volume 104.
+\newblock Prentice hall Upper Saddle River, NJ, 1998.
+
+\bibitem[Zou et~al.(2023)Zou, Wang, Carlini, Nasr, Kolter, and Fredrikson]{zou2023universal}
+Andy Zou, Zifan Wang, Nicholas Carlini, Milad Nasr, J~Zico Kolter, and Matt Fredrikson.
+\newblock \href{https://arxiv.org/abs/2307.15043}{Universal and transferable adversarial attacks on aligned language models}.
+\newblock \emph{arXiv preprint arXiv:2307.15043}, 2023.
+
+\bibitem[Zou et~al.(2024)Zou, Phan, Wang, Duenas, Lin, Andriushchenko, Kolter, Fredrikson, and Hendrycks]{zou2024improving}
+Andy Zou, Long Phan, Justin Wang, Derek Duenas, Maxwell Lin, Maksym Andriushchenko, J~Zico Kolter, Matt Fredrikson, and Dan Hendrycks.
+\newblock \href{https://arxiv.org/abs/2406.04313}{Improving alignment and robustness with circuit breakers}.
+\newblock In \emph{The Thirty-eighth Annual Conference on Neural Information Processing Systems}, 2024.
+
+\end{thebibliography}

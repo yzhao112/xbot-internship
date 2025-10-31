@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+plan: [goto(ground\PYGZus{}21),
+       explore\PYGZus{}region(ground\PYGZus{}21)]
+\end{Verbatim}

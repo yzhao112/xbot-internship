@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+plan: [goto(sidewalk\PYGZus{}2),
+       inspect(road\PYGZus{}sign\PYGZus{}1, Can this be knocked over?\PYGZsq{}),
+       inspect(lamp\PYGZus{}post\PYGZus{}2, Can this be knocked over?),
+       inspect(bench\PYGZus{}2, Can this be moved?\PYGZsq{})]
+\end{Verbatim}

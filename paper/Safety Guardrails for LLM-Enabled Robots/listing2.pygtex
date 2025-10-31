@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}\PYG{n+nt}{\PYGZdq{}objects\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[\PYGZob{}}\PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}object\PYGZus{}1\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{              }\PYG{n+nt}{\PYGZdq{}coordinates\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{p}{]\PYGZcb{},}
+\PYG{+w}{             }\PYG{l+s+s2}{\PYGZdq{}...\PYGZdq{}}\PYG{p}{],}
+\PYG{n+nt}{\PYGZdq{}regions\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[\PYGZob{}}\PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}region\PYGZus{}1\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{             }\PYG{n+nt}{\PYGZdq{}coordinates\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{p}{]\PYGZcb{},}
+\PYG{+w}{            }\PYG{l+s+s2}{\PYGZdq{}...\PYGZdq{}}\PYG{p}{],}
+\PYG{n+nt}{\PYGZdq{}object\PYGZus{}edges\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[[}\PYG{l+s+s2}{\PYGZdq{}edge\PYGZus{}source\PYGZus{}1\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                  }\PYG{l+s+s2}{\PYGZdq{}edge\PYGZus{}target\PYGZus{}1\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                 }\PYG{l+s+s2}{\PYGZdq{}...\PYGZdq{}}\PYG{p}{],}
+\PYG{n+nt}{\PYGZdq{}region\PYGZus{}edges\PYGZdq{}}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{[[}\PYG{l+s+s2}{\PYGZdq{}edge\PYGZus{}source\PYGZus{}1\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                  }\PYG{l+s+s2}{\PYGZdq{}edge\PYGZus{}target\PYGZus{}1\PYGZdq{}}\PYG{p}{],}
+\PYG{+w}{                 }\PYG{l+s+s2}{\PYGZdq{}...\PYGZdq{}}\PYG{p}{]\PYGZcb{}}
+\end{Verbatim}
