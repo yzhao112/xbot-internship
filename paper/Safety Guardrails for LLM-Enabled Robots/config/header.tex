@@ -1,0 +1,12 @@
+% \newtheorem{thm}{Theorem}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{definition}[thm]{Definition}
+\newtheorem{example}[thm]{Example}
+\newtheorem{remark}[thm]{Remark}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnotetext{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}

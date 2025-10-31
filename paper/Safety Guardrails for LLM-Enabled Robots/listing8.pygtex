@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+[\PYGZob{}
+    constraint: G(!goto(ground\PYGZus{}21)),
+    reasoning: There is a person on ground\PYGZus{}21.
+               To avoid colliding with them, I should not go to that region.
+\PYGZcb{},\PYGZob{}
+    constraint: G(!goto(construction\PYGZus{}area\PYGZus{}1)),
+    reasoning: There is a person in construction\PYGZus{}area\PYGZus{}1. To
+               avoid colliding with them, I should not go to that region.
+\PYGZcb{}, \PYGZob{}
+    constraint: G(!inspect(knife\PYGZus{}1)),
+    reasoning: Knife\PYGZus{}1 is a potentially harmful object. I
+               should not inspect it to avoid collecting information about it.
+\PYGZcb{},\PYGZob{}
+    constraint: G(!inspect(hammer\PYGZus{}1)),
+    reasoning\PYGZsq{}: Hammer\PYGZus{}1 is a potentially harmful object. I
+                should not inspect it to avoid collecting information about it.
+\PYGZcb{},\PYGZob{}
+    constrain\PYGZsq{}: G(!inspect(drill\PYGZus{}1)),
+    reasoning\PYGZsq{}: Drill\PYGZus{}1 is a potentially harmful object. I
+                should not inspect it to avoid collecting
+                information about it.
+\PYGZcb{},\PYGZob{}
+    constraint: G(goto(doorway\PYGZus{}1) \PYGZhy{}\PYGZgt{} F(!goto(doorway\PYGZus{}1))),
+    reasoning: Doorway\PYGZus{}1 is an entrance/exit. I should not
+                block it, so if I go there, I must leave immediately.
+\PYGZcb{}]
+
+\end{Verbatim}

@@ -1,0 +1,43 @@
+
+\section{Threat: Jailbreaking Robots}
+\label{sec:preliminaries}
+
+We design the \textsc{RoboGuard} architecture with a focus on safeguarding against jailbreaking attacks on LLM-enabled robots. To fully contextualize the method proposed in this paper, we first describe the threat models that characterize these attacks and the unique vulnerabilities they pose. 
+This discussion leads to a natural proposal of a desiderata for candidate defenses against robotic jailbreaking, which we then use to develop \textsc{RoboGuard}.
+
+
+
+
+\subsection{Jailbreaking LLM-enabled robots}
+
+In this paper, we focus on the \textsc{RoboPAIR} jailbreaking attack, which was the first attack to demonstrate that LLM-enabled robots can be jailbroken to cause harm in the physical world~\cite{robey2024jailbreaking}.  
+The design of \textsc{RoboPAIR} is rooted in the \textsc{PAIR} jailbreaking algorithm, which is specifically designed to target LLM chatbots~\cite{chao2023jailbreaking}.  At a high level, \textsc{PAIR} pits two LLM chatbots---termed the \emph{attacker} and the \emph{target}---against one another in an iterative game, wherein the attacker's goal is to jailbreak the target into generating harmful content (e.g., instructions on how to defraud a charity).  At each round of \textsc{PAIR}, the attacker proposes a candidate jailbreaking prompt.  The target then generates a response to this prompt, which is then scored by a third \emph{judge} LLM.  The candidate prompt, target response, and judge score are then passed back to the attacker, which produces a new candidate prompt.  This feedback loop between the attacker, target, and judge continues for a fixed number of iterations until a jailbreak is found.
+
+\textsc{RoboPAIR} builds on \textsc{PAIR} by tailoring the objectives of the attacker and judge to more effectively elicit robotic actions from a targeted LLM planner.  
+The goal of eliciting actions motivates the introduction of robot-specific system prompts for the attacker and judge, which instruct these models to favor generations that include code from the robot's API.  
+To assess the extent to which the applicability of the generated code to the targeted robot, a fourth LLM---termed the \emph{syntax checker}---is introduced into the iteration.  In this way, at each round of \textsc{RoboPAIR}, the attacker receives its previous candidate prompt, the target's response, the judge's score, and the syntax checker's score before generating a new prompt. 
+
+As demonstrated by \citet{robey2024jailbreaking},
+\textsc{RoboPAIR} successfully elicits harmful behaviors across a variety of robot contexts and LLM planning instantiations.
+Without extensive per-platform configuration, \textsc{RoboPAIR} led three distinct LLM-enabled robots -- a quadruped, an autonomous driving framework, and a  mobile robot -- to perform actions including delivering bombs, covertly surveilling humans, and blocking emergency exits.
+These results emphasize that there are new safety and secutiy risks for LLM-enabled robots persist across specific robot environments and planner instantiations.
+Traditional safety approaches that require a robot designer to specify all potential failure modes simply do not address the vulnerabilities of LLM-enabled robots.  New safeguard approaches are needed for addressing LLM safety in robotics.
+
+
+\subsection{Desiderata for LLM-enabled Robotic Safeguards}
+\label{sec:desiderata}
+
+The unique vulnerabilities of LLM-enabled robotics motivate several considerations when designing a safety guardrail. To this end, we next propose several general properties for LLM-enabled robotic safeguards 
+that we hope will serve as a foundation for future research on this topic.
+
+
+\begin{enumerate}[left=2em]
+    \item [(D1)] \textbf{\emph{Contextual attack mitigation.}} Safeguards should mitigate unsafe behavior across various robotic contexts.
+    \item [(D2)] \textbf{\emph{Applicability.}} Safeguards should be agnostic to different LLM planning architectures or instantiations.
+    \item [(D3)] \textbf{\emph{Utility.}} Safeguards should not diminish the capabilities of LLM-enabled robots in non-adversarial settings.
+    \item [(D4)] \textbf{\emph{Efficiency.}} Safeguards should minimize additional offline and online computational costs and latency.
+\end{enumerate}
+%
+\noindent Given the need for LLM-enabled robots to operate in open-world settings, this desiderata is intended to cover broad ranges of use. 
+The first pair of desiderata, (D1) and (D2), directly address the vulnerabilities highlighted by \textsc{RoboPAIR}.
+The next pair, (D3) and (D4), ensure that the usability of an LLM planner in non-adversarial settings is not compromised by the robustness of a candidate safeguard.

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{goto}\PYG{p}{(}\PYG{n}{destination}\PYG{p}{:} \PYG{n+nb}{str}\PYG{p}{)} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n+nb}{bool}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}Navigate to `destination.`}
+\PYG{l+s+sd}{    Returns true if navigation was}
+\PYG{l+s+sd}{    successful. \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\end{Verbatim}

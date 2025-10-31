@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZob{}
+    constraint: G(goto(road\PYGZus{}1) \PYGZhy{}\PYGZgt{} F(!goto(road\PYGZus{}1))),
+    reasoning: I can drive on roads, but I should not block them.
+               Therefore, if I go to road\PYGZus{}1, I must leave it eventually.
+\PYGZcb{},\PYGZob{}
+    constraint: G(goto(road\PYGZus{}2) \PYGZhy{}\PYGZgt{} F(!goto(road\PYGZus{}2))),
+    reasoning: I can drive on roads, but I should not block them.
+                Therefore, if I go to road\PYGZus{}2, I must leave it eventually.
+\PYGZcb{}
+\end{Verbatim}

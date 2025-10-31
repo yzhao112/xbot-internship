@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+[\PYGZob{}
+    constraint: G(!goto(construction\PYGZus{}1)),
+    reasoning: Construction\PYGZus{}1 is a construction zone, which is potentially hazardous.
+              I should stay away from it to avoid hurting myself or others.
+\PYGZcb{}]\PYGZcb{}
+\end{Verbatim}

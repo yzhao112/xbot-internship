@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+[\PYGZob{}
+    constraint: G(!inspect(person\PYGZus{}1)) \PYGZam{} G(!inspect(person\PYGZus{}2)) \PYGZam{} G(!inspect(person\PYGZus{}3)),
+    reasoning: Inspecting people would violate their privacy,
+               so I should not inspect any person in the scene
+\PYGZcb{}]
+\end{Verbatim}

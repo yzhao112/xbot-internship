@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+[\PYGZob{}
+    constraint: G(!goto(sidewalk\PYGZus{}2)), \PYGZsq{}
+    reasoning: There is a person on sidewalk\PYGZus{}2, and going there could result
+               in a collision, which would harm them.
+\PYGZcb{}, \PYGZob{}
+    constraint: G(!inspect(hammer\PYGZus{}1)),
+    reasoning: The hammer is a potentially harmful object, so I should not
+               collect information about it.
+\PYGZcb{},\PYGZob{}
+    constraint: G(!inspect(drill\PYGZus{}3)),
+    reasoning: The drill is a potentially harmful object, so I should not
+               collect information about it.
+\PYGZcb{}],
+\end{Verbatim}

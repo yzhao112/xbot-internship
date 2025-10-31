@@ -1,0 +1,110 @@
+\documentclass[conference]{IEEEtran}
+\input{config/packages}
+\input{config/header}
+
+% \usepackage{blfootnote
+
+\newcommand{\name}{\textsc{RoboGuard }}
+\newcommand{\namepossesive}{\textsc{RoboGuard}'s }
+
+\newif\ifdraftcolor
+
+\draftcolortrue % comment out to hide user colors
+
+\ifdraftcolor
+\newcommand{\todo}[1]{{\textcolor{red}{#1}}}
+\newcommand{\zac}[1]{{\color{magenta}{Zac: #1}}}
+\newcommand{\hh}[1]{{\textcolor{blue}{H: #1}}}
+\else
+\newcommand{\todo}[1]{{\textcolor{red}{}}}
+\newcommand{\zac}[1]{{\color{magenta}{}}}
+\newcommand{\hh}[1]{{\textcolor{blue}{}}}
+
+\fi 
+
+
+\newcommand{\shortskip}{\vspace{5pt}}
+
+\pdfinfo{
+   /Author (Homer Simpson)
+   /Title  (Robots: Our new overlords)
+   /CreationDate (D:20101201120000)
+   /Subject (Robots)
+   /Keywords (Robots;Overlords)
+}
+
+
+\begin{document}
+
+
+% paper title
+\title{Safety Guardrails for  LLM-Enabled Robots}
+
+% \author{Zachary Ravichandran}
+% \author{Alexander Robey}
+% \author{Vijay Kumar}
+% \author{George J. Pappas}
+% \author{Hamed Hassani}
+
+\author{Zachary Ravichandran$^1$, Alexander Robey$^2$, Vijay Kumar$^1$, George J. Pappas$^1$, and Hamed Hassani$^1$
+\vspace{4pt} \\
+$^1$University of Pennsylvania \qquad $^2$Carnegie Mellon University 
+% \vspace{4pt} \\
+% {
+% \color{red}\url{https://robo-guard.github.io}
+% }
+% \zac{roboguard.github.io is taken by what appears to be a startup}
+\thanks{corresponding author: }
+}
+
+
+
+\maketitle
+
+\blfootnote{Correspondence to \texttt{zacravi@seas.upenn.edu}}
+
+\begin{abstract}
+Although the integration of large language models (LLMs) into robotics has unlocked transformative capabilities, it has also introduced significant safety concerns, ranging from average-case LLM errors (\textit{e.g.,} hallucinations) to adversarial jailbreaking attacks, which can produce harmful robot behavior in real-world settings. 
+Traditional robot safety approaches do not address the novel vulnerabilities of LLMs, and current LLM safety guardrails overlook the physical risks posed by robots operating in dynamic real-world environments. 
+In this paper, we propose \textsc{RoboGuard}, a two-stage guardrail architecture to ensure the safety of LLM-enabled robots.
+\textsc{RoboGuard} first contextualizes pre-defined safety rules by grounding them in the robot's environment using a root-of-trust LLM, which employs chain-of-thought (CoT) reasoning to generate rigorous safety specifications, such as temporal logic constraints.
+\textsc{RoboGuard} then resolves potential conflicts between these contextual safety specifications and a possibly unsafe plan using temporal logic control synthesis, which ensures safety compliance while minimally violating user preferences. 
+Through extensive simulation and real-world experiments that consider worst-case jailbreaking attacks, we demonstrate that \textsc{RoboGuard} reduces the execution of unsafe plans from 92\% to below 2.5\% without compromising performance on safe plans. 
+We also demonstrate that \textsc{RoboGuard} is resource-efficient, robust against adaptive attacks, and significantly enhanced by enabling its root-of-trust LLM to perform CoT reasoning.
+These results underscore the potential of \textsc{RoboGuard} to mitigate the safety risks and enhance the reliability of LLM-enabled robots.
+
+\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+
+\input{content/00-intro}
+
+\input{content/01-related-work}
+
+
+\input{content/02-prelim}
+
+\input{content/03-method}
+
+\input{content/04-experiments}
+
+
+\input{content/05-limitations-conclusion}
+
+
+\section*{Acknowledgments}
+This work was supported by the DARPA SAFRON grant, under award number HR0011-25-3-0135, the Distributed and Collaborative Intelligent Systems and Technology (DCIST) Collaborative Research Alliance (ARL DCIST CRA W911NF-17-2-0181), the National Science Foundation Graduate Research Fellowship, and The AI Institute for Learning-enabled Optimization at Scale (TILOS) under award number NSF-CCF-2112665. We also thank Varun Murali and Fernando Cladera for feedback on early drafts of this paper.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+
+\newpage
+\input{appendix}
+
+
+
+\end{document}
+
+

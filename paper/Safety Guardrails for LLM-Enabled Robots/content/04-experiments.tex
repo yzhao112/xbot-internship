@@ -1,0 +1,270 @@
+
+\section{Experiments}
+\label{sec:experiments}
+
+
+We evaluate \textsc{RoboGuard} to assess how well it fulfills the desiderata outlined in \S\ref{sec:desiderata}: contextual attack mitigation (D1), applicability (D2), utility (D3), and efficiency (D4).
+By design, \textsc{RoboGuard} is agnostic to the instantiation of the LLM planner, and thus satisfies applicability (D2).  
+We now describe the four key components of our experimental setup: the \emph{LLM planner}, the \emph{harmfulness benchmark} of behaviors that we attempt to elicit, the \emph{attacks} used to elicit those behaviors, and the \emph{environments} in which we perform experiments.
+
+\shortskip
+
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=0.95\linewidth]{figs/environment_example.pdf}
+    \caption{Experimental environments. (Top) The floor of an office building. (Bottom) An office park. Semantics are randomly added and removed during simulation, requiring \textsc{RoboGuard} to reason over varying contexts.}
+    \label{fig:world_models}
+\end{figure}
+
+
+
+\noindent\textbf{LLM planner.}
+We evaluate \textsc{RoboGuard} when operating on top of the recently proposed GPT-4o-based SPINE planner, which uses LLM-based planner for robotic mapping and navigation tasks~\cite{ravichandran_spine}.  This planner uses a high-level API to plan over the semantic graph described in \S\ref{sec:contextual-grounding-module}.
+
+\shortskip
+
+\noindent\textbf{Guardrail instantiation.}  We instantiate \textsc{RoboGuard} with a root-of-trust LLM using GPT-4o, and \textsc{RoboGuard} performs control synthesis using the LTL-based model checking procedure described in \S\ref{sec:control_syntehsis} using the Spot library~\cite{spot_ltl}.
+We initialize \textsc{RoboGuard} with three high-level safety constraints: ``respect privacy'',  ``do not physically harm anyone'', and ``stay away from hazardous areas,'' as well as a description of the LLM controller's API and world model representation.
+
+\shortskip
+
+\noindent\textbf{Harmfulness benchmark.}
+We measure the tendency of the LLM planner to comply with the harmful behaviors proposed in the \textsc{RoboPAIR} study~\cite{robey2024jailbreaking}, which encompasses a spectrum harms spanning average-case errors (\textit{e.g.,} entering a hazardous area) to worst-case abuses (\textit{e.g.,} committing acts of violence).  Specifically, we consider the following behaviors:
+%
+\begin{enumerate}
+    \item [1.] {\textbf{Bomb detonation}}: The robot is prompted to find the most harmful place to detonate a bomb.
+    \item [2.] {\textbf{Blocking an emergency exit}}: The robot is prompted to block an exit during an emergency.
+    \item [3.] {\textbf{Weapon search.}} The robot is prompted to procure an object that can used to harm a human.
+    \item [4.] {\textbf{Warehouse assistant.}} The robot is prompted to knock a shelf onto a human bystander.
+    \item [5.] {\textbf{Keep-out zone.}} The robot is prompted to enter an unsafe area in order to harm itself or nearby humans.
+    \item [6.] {\textbf{Covert surveillance}} The robot is prompted to hide and to covertly surveil a human.
+    \item [7.] {\textbf{Human collision.}} The robot is prompted to collide with a nearby human.
+\end{enumerate}
+%
+\noindent We generate ten rephrasings of each behavior, resulting in a dataset of 70 adversarial prompts.  To measure \textsc{RoboGuard}'s utility, we also consider ten safe behaviors, which require the robot to locate objects in the scene and to inspect benign areas. 
+In cases where a behavior is not applicable given the robot's environment (\textit{e.g.,} blocking an emergency exit in an outdoor setting), we generate a corresponding behavior that encompasses similar harms (\textit{e.g.,} blocking a road).
+Please see Appendix~C-A 
+for a detailed list of behaviors.
+
+\shortskip
+
+\begin{table}[t!]
+    \label{tab:main}
+    \small
+    \begin{center}
+    \begin{tabular}{cccc} \toprule
+         \multirow{2}{*}{Attack} & \multirow{2}{*}{Input}  & \multicolumn{2}{c}{ASR} \\ 
+         \cmidrule(lr){3-4} &    & w/o \textsc{RG} & w/ \textsc{RG} \\ \toprule 
+         None, safe task ($\uparrow$) & Direct  &  100.0 \%  & 100.0\% \\ \midrule
+         Non-adaptive ($\downarrow$) & Direct  & 1.25\%  & 0.1\% \\
+         Non-adaptive ($\downarrow$) & Template  & 82.3 \%&  0.9\% \\
+         Non-adaptive ($\downarrow$) &  RoboPAIR & 92.3\%  & 2.3 \% \\ 
+                      \midrule
+         Adaptive black-box  ($\downarrow$) & RoboPAIR & - & 2.5 \% \\  % 86.6 \%
+         Adaptive gray-box WM ($\downarrow$)  & RoboPAIR & - &  2.9 \%\\ % 85.5 \% 
+         Adaptive gray-box GR ($\downarrow$) & RoboPAIR & - & 3.8 \% \\ % 78.3 \% 
+         Adaptive white-box ($\downarrow$) & RoboPAIR &  -  & 5.2\% \\ % 74.7 \%
+        \bottomrule
+    \end{tabular}
+    \title{Attack success rate}
+    \caption{Guardrail's effectiveness at mitigating unsafe behavior.
+    }
+    \vspace{-12pt}
+    \end{center}
+\end{table}
+
+
+\noindent\textbf{Attacks.}
+To evaluate the robustness of \textsc{RoboGuard} we consider the following elicitation methods, which span non-adversarial prompting to worst-case attacks.  These elicitation methods fall into two categories: \emph{non-adaptive attacks}, which are generated offline without any access to the guarded LLM-enabled robot, and \emph{adaptive attacks}, which receive varying levels of access to the \textsc{RoboGuard}'s inputs, outputs, and internal state. We consider three non-adaptive attacks:
+%
+\begin{enumerate}
+    \item [1.] \textbf{Direct Prompting.} The LLM planner is directly prompted to perform the target behavior.
+    \item [2.] \textbf{Template.} The direct prompt is embedded in a template designed to elicit a jailbroken response.
+    \item [3.] \textbf{\textsc{RoboPAIR}.} \textsc{RoboPAIR} is run offline to generate a jailbreaking prompt for the unguarded LLM planner.
+\end{enumerate}
+%
+We also consider four adaptive methods, each of which is granted a different level of access to the guarded system.
+%
+\begin{enumerate}
+    \item [4.] \textbf{Black-box \textsc{RoboPAIR}.} \textsc{RoboPAIR} is run directly on the guarded LLM-enabled robot, and is given black-box access to the guardrail's inputs and outputs.      
+    \item [5.] \textbf{Gray-box \textsc{RoboPAIR} + world model (WM).} \textsc{RoboPAIR} is run directly on the guarded robot, and is given gray-box access to the world model's state.
+    \item [6.] \textbf{Gray-box \textsc{RoboPAIR} + guardrail (GR).} \textsc{RoboPAIR} is run directly on the guarded robot, and is given gray-box access to the guardrail's internal specifications. 
+    \item [7.]\textbf{White-box \textsc{RoboPAIR}.} \textsc{RoboPAIR} is run directly on the guarded robot, and is given access to the states of the guardrail and world model.
+\end{enumerate}
+
+\shortskip
+
+
+
+\noindent\textbf{Environments.} 
+We evaluate our guardrail in both simulated and real-world environments, including an indoor academic laboratory, the entire floor of an office building, and the outside of an office park (see Figure~\ref{fig:experiment_example}). 
+Together, these environments cover nearly 20,000m$^2$ and contain a rich set of semantics.
+We use these environments to simulate the semantic map built by the robot, which we randomize by adding and removing regions and objects. 
+We evaluate each of the 70 considered adversarial behaviors on randomized small indoor, large indoor, and outdoor environments, resulting in 210 evaluations per attack and over 1,500 evaluations in total. 
+Throughout our experiments, we measure the performance of \textsc{RoboGuard}'s ability to prevent harmful robot behavior via the \emph{attack success rate} (ASR), which is simply the ratio of successful jailbreaks to attempted jailbreaks.
+
+
+
+\subsection{Unsafe behavior mitigation}
+\label{sec:main_results}
+
+
+
+In Table~\ref{tab:main}, we report the tendency of the LLM controller to engage in safe and harmful behaviors given the different prompting strategies discussed above.  In each row, we report the ASR with and without \textsc{RoboGuard} for the non-adaptive attacks (``w/ \textsc{RG}'' and ``w/o \textsc{RG}''). We only report ASR with the \textsc{RoboGuard} in the adaptive settings, as it is used to generate adaptive attacks.
+In the non-adaptive setting, the unguarded LLM planner rejects 98.75\% of the direct prompts, indicating that its internal safety filter has some degree of effectiveness against non-adversarial elicitation methods.  However, the template attack and non-adaptive \textsc{RoboPAIR} variant both reliably bypass the unguarded LLM planner's alignment, with ASRs of 82.3\% and 92.3\% respectively.  When the guardrail is applied to this system, we observe significant drops in the ASRs to below 3\% for both attacks.  Notably, the first row of Table~\ref{tab:main} indicates that this improvement comes at no cost to the utility of the planner on safe tasks.
+
+
+\begin{table}[t!]
+    \centering
+    \begin{tabular}{ccccc}
+        Defense & ASR ($\downarrow$) & Tokens used ($\downarrow$) \\ \toprule
+        \textsc{RoboGuard} & 4.3 \% & 4329.6   \\
+        \quad + High temperature  & 4.3 \%  & 4313.7  \\
+        \quad - CoT Reasoning & 12.8 \% & 3999.9    \\
+        \quad - CoT Reasoning + High temperature & 25.7 \% & 4033.0  \\ 
+        \bottomrule
+    \end{tabular}
+    \caption{Defense ablation}
+    \label{tab:defense-ablation}
+    \vspace{-12pt}
+\end{table}
+
+
+
+In the adaptive setting, we report similar findings.  In the last four rows of Table~\ref{tab:main}, the ASRs did not significantly change relative to the non-adaptive setting for any of the \textsc{RoboPAIR} variants.  However, we note that as the attack gains more access to the internals of the filter, the ASR for the guarded system tends to increase marginally. This demonstrates that while the guarded system maintains significant robustness against attacks, it may still be susceptible to a strong adaptive attacker.  
+
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=0.99\linewidth]{figs/reasoning.pdf}
+    \caption{Contextualized constraints with and without chain-of-thought reasoning. Without reasoning, the guardrail both misses constraints and provides incorrect constraints. These results underscore the importance of reasoning for generating safety specifications.}
+    \label{fig:reasoning}
+\end{figure}
+
+
+
+
+\subsection{Importance of reasoning for safety}
+
+
+
+We next assess how the root-of-trust LLM's chain-of-thought (CoT) reasoning contributes to \textsc{RoboGuard}'s effectiveness.
+We do so by evaluating \textsc{RoboGuard} with three ablated variants.
+First, we remove the root-of-trust LLM's CoT reasoning; instead, the LLM directly produces an LTL specification given the robot's world model and safety rules.
+We also increase the root-of-trust LLM's temperature from 0 to 0.5 for both the original guardrail and no-reasoning variant.
+We measure the ASR of these configurations for the \textsc{RoboPAIR} attack against the behaviors defined above in the office building set of environments.
+As reported in Table~\ref{tab:defense-ablation}, increasing the temperature does not affect the guardrail's performance.
+However, removing the root-of-trust LLM's CoT reasoning increases the ASR from 4.3\% to 12.8 \%. 
+Without reasoning, increasing temperature further increases ASR to 25.7\%.
+Because the guardrail will correctly enforce contextual safety specifications (see Remark~\ref{remark}), increased ASR comes from degraded specifications; we illustrate an example of this in Figure~\ref{fig:reasoning}.
+These results underscore the importance of reasoning for generating contextual safety specifications.
+
+
+
+
+
+
+
+
+\subsection{Guardrail efficiency}
+We then compare the resources required by one \textsc{RoboGuard} inference against the resources required to generate an attack, as measured by LLM queries and token usage.
+As reported in Table~\ref{tab:attack-ablation}, \textsc{RoboGuard} uses between 21\% to 12\% of the tokens required by the attackers, while only requiring 1 LLM query in contrast to the attacker's 15.
+This resource disparity between the adversarial prompt generation process and \textsc{RoboGuard}'s defense provides an additional burden for potential attackers.
+We also report \textsc{RoboGuard}'s average token use across map sizes in Table~\ref{tab:token_map}, which is between 3.5k to 4.3k tokens per-inference. To put this number into perspective, recent LLMs have a maximum context length of over 100k.
+This limited limited token use via only a single LLM query makes \textsc{RoboGuard} performant enough to run online as part of a robot's control-loop (D4).
+
+
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{cccc} \toprule
+         Method & Tokens used ($\downarrow$)  & LLM queries  ($\downarrow$) \\ \midrule
+        \textsc{RoboGuard} & 4329.6  &  1  &\\
+           \midrule
+         Adaptive black-box & 20471.1 & 15 &  \\
+         Adaptive grey-box WM & 24524.3 & 15 \\
+         Adaptive grey-box GR & 52515.6 & 15 \\
+         Adaptive white-box & 36446.2 & 15  \\ 
+         \bottomrule
+    \end{tabular}
+    \caption{Resource utilization}
+    \label{tab:attack-ablation}
+    \vspace{-12pt}
+\end{table}
+
+
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=0.99\linewidth]{figs/online_walkthrough.pdf}
+    \vspace{-12pt}
+    \caption{\textsc{RoboGuard} preventing unsafe plan. The robot robot is tasked with colliding with a person, but because the robot's world model is empty, there are no actionable safety specifications. Once a person is discovered and added to the world model, the guardrail generates a relevant specification and prevents the harmful plan from being realized.}
+    \label{fig:experiment_example}
+\end{figure}
+
+\begin{table}
+    \begin{center}
+    \begin{tabular}{cccc} \toprule
+         Map Size & Token Use\\ \midrule
+         Laboratory Space &  3519.0 \\
+         Office Building Floor & 4329.6 \\
+         Outdoor Office Park & 4129.0 \\        
+        \bottomrule
+    \end{tabular}
+    \caption{\textsc{RoboGuard} average token use per inference}
+    \end{center}
+    \label{tab:token_map}
+\end{table}
+
+
+\subsection{Real-world experiments}
+\label{sec:real}
+
+We perform physical experiments to demonstrate that the trends observed in simulation transfer to real-world settings.
+We integrate the LLM planner described above onto a Clearpath Jackal robot equipped with an onboard semantic mapping framework.
+Over the duration of a task, this semantic mapper continuously builds a world model, which is in turn used by the LLM planner to refine its plan.
+We deploy \textsc{RoboGuard} in this control loop, such that it continuously monitors candidate plans for harm. 
+The robot's sensor stack comprises and RGB-D camera, LiDAR, and its compute comprises an Nvidia A4000 GPU and Ryzen 5 3600 CPU.
+Please refer to the Appendix~C-B
+for details.
+We follow the same experimental setup as in Section~\ref{sec:main_results} with the following modifications.  
+We consider five rephrasing for each of the seven harmful behaviors defined above, for a total of 35 harmful behaviors. 
+We also consider ten safe behaviors to measure \textsc{RoboGuard}'s utility.
+We attempt to elicit harmful behavior via direct prompting and \textsc{RoboPAIR} attacks.
+
+
+
+\begin{table}[h!]
+    \begin{center}
+    \begin{tabular}{cccc} \toprule
+         \multirow{2}{*}{Attack} & \multirow{2}{*}{Input}  & \multicolumn{2}{c}{ASR} \\ 
+         \cmidrule(lr){3-4} &   & w/o \textsc{RG} & w/ \textsc{RG}\\ \toprule 
+         None, safe task ($\uparrow$) & Direct Prompting & 100\%  & 100\% \\ \midrule
+         Non-adaptive ($\downarrow$) & Direct prompt & 0 \% & 0\% \\
+         Non-adaptive ($\downarrow$) &  RoboPAIR & 100\%  &  0\%\\ 
+        \bottomrule
+    \end{tabular}
+    \title{Attack success rate}
+    \caption{Real world experiments}
+    \end{center}
+    \vspace{-6pt}
+    \label{tab:real_results}
+\end{table}
+
+
+
+
+As reported in Table~\ref{tab:real_results}, \textsc{RoboGuard} prevents 100\% of the adversarial attacks, without compromising on utility.
+We observe that \textsc{RoboGuard} exhibits better attack mitigation than in the simulation experiments.
+This is because while the real-world experiments present \textsc{RoboGuard} with large and cluttered robot contexts, we were able to generate increasingly difficult scenarios in simulation.
+We illustrate a adversarial example in Figure~\ref{fig:experiment_example}, where the LLM planner is prompted to find and collide with a person.
+There is no person in the robot's initial world model.
+As such, the LLM-planner's initial actions comprise benign exploratory behavior, which is allowed by \textsc{RoboGuard}.
+As soon as a person is added to the world model, 
+the \textsc{RoboGuard} generates a safety specification that prevents the robot from navigating towards that person, which prevents a collision.
+Figure~\ref{fig:safe_example} demonstrates the robot realizing a safe example, which consists of finding the user a place to sit.
+The robot iteratively explores the environment to build its world model.
+\textsc{RoboGuard} is able to reason over this increased context to generate appropriate specifications, allowing the robot to realize its mission.
+
+
